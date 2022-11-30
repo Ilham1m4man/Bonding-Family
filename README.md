@@ -3,7 +3,9 @@ Web app that helps parents to create a bond and stay connected to their children
 
 ## Work in Progress
 
-1. Designing the UI
+1. Designing the UI ✔
+2. Implementing the UI
+3. Making the content
 
 
 
