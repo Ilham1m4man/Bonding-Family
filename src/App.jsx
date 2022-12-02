@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/Homepage";
 
-function BondingFams() {
+const BondingFams = () => {
   return (
     <>
       <main>
@@ -12,5 +12,5 @@ function BondingFams() {
       </main>
     </>
   );
-}
+};
 export default BondingFams;
