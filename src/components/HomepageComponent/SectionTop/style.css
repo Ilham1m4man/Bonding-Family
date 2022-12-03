@@ -2,13 +2,23 @@
   display: flex;
   justify-content: space-between;
 }
+.hamburgerIcon {
+  display: none;
+}
 .sectionTop h2 {
   font-size: 25px;
   font-weight: 500;
 }
+.profileOnMobileWidth {
+  display: none;
+  width: 50px;
+  height: 50px;
+  margin-left: 1em;
+}
 .sectionTop h1 {
   font-size: 35px;
-  margin-top: -25px;
+  margin-top: -20px;
+  font-weight: 500;
 }
 .notif img {
   margin-top: 1em;

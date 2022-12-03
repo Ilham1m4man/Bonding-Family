@@ -4,71 +4,32 @@ import Chart from "react-apexcharts";
 const ApexChart = () => {
   const [series, useSeries] = useState([
     {
-      name: "Net Profit",
-      data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
+      name: "Interaksi",
+      data: [20, 15, 25, 30],
     },
     {
-      name: "Revenue",
-      data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
-    },
-    {
-      name: "Free Cash Flow",
-      data: [35, 41, 36, 26, 45, 48, 52, 53, 41],
+      name: "Target",
+      data: [10, 15, 25, 25],
     },
   ]);
   const [options, useOptions] = useState({
     chart: {
-      type: "bar",
-      height: 350,
-    },
-    plotOptions: {
-      bar: {
-        horizontal: false,
-        columnWidth: "55%",
-        endingShape: "rounded",
-      },
-    },
-    dataLabels: {
-      enabled: false,
+      height: 380,
+      width: "100%",
+      type: "area",
     },
     stroke: {
-      show: true,
-      width: 2,
-      colors: ["transparent"],
+      curve: "smooth",
     },
+
     xaxis: {
-      categories: [
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-      ],
-    },
-    yaxis: {
-      title: {
-        text: "$ (thousands)",
-      },
-    },
-    fill: {
-      opacity: 1,
-    },
-    tooltip: {
-      y: {
-        formatter: function (val) {
-          return "$ " + val + " thousands";
-        },
-      },
+      categories: ["Minggu 1", "Minggu 2", "Minggu 3", "Minggu 4"],
     },
   });
 
   return (
     <div id="chart">
-      <Chart options={options} series={series} type="bar" height={250} />
+      <Chart options={options} series={series} type="area" height={250} />
     </div>
   );
 };

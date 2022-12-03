@@ -5,23 +5,11 @@ import JadwalIcon from "../../../assets/icons/Jadwal-Icon.svg";
 import SurveyIcon from "../../../assets/icons/Survey-Icon.svg";
 import TipsTrik from "../../../assets/icons/Tips-&-Trik-icon.svg";
 import ProfileAvatar from "../../../assets/icons/Avatar-profile.svg";
-import closeIconSidebar from "../../../assets/icons/close-icon.png";
 import "./styleSidebar.css";
-const Sidebar = ({ closeSidebar }) => {
+const SidebarCopy = () => {
   return (
     <>
-      <div className="sidebar" id="sidebar">
-        <aside className="closeSidebarSection">
-          <div className="closeSidebar">
-            <div>{/*  */}</div>
-            <img
-              onClick={closeSidebar}
-              id="closeSidebar"
-              src={closeIconSidebar}
-              alt="close sidebar"
-            />
-          </div>
-        </aside>
+      <div className="sidebar">
         <div className="logoBondingFams">
           <div className="logo">
             <img src={LogoBonding} alt="logo bonding family"></img>
@@ -61,4 +49,4 @@ const Sidebar = ({ closeSidebar }) => {
     </>
   );
 };
-export default Sidebar;
+export default SidebarCopy;

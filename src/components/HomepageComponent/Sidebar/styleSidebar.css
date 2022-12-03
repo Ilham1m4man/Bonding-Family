@@ -1,6 +1,6 @@
 .sidebar {
   padding: 3em 2em;
-  width: 300px;
+  width: 400px;
   height: 100%;
   border-right: 1px solid #d6d6d6;
 }
@@ -13,6 +13,9 @@
 .sidebarFitur p {
   margin-left: 1em;
 }
+#closeSidebar {
+  display: none;
+}
 .sidebarFitur div {
   border-radius: 15px;
   display: flex;
@@ -24,7 +27,7 @@
   background-color: rgba(105, 123, 213, 1);
 }
 .logo {
-  margin: 0 21%;
+  margin: 0 5em;
 }
 .titleLogo {
   font-family: "Spartan";
@@ -33,7 +36,7 @@
   font-size: 20px;
   line-height: 18px;
   text-align: center;
-  margin-top: -1px;
+  margin-top: 5px;
 }
 
 .profileName div {

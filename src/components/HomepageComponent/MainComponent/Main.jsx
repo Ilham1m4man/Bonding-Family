@@ -2,14 +2,16 @@ import React from "react";
 import "./style.css";
 import smileIcon from "../../../assets/icons/smile.png";
 import ApexChart from "../Chart/chart1";
+import ChartKemajuanHubungan from "../Chart/chart2";
 
 const MainContent = () => {
   return (
     <>
       <div className="mainContent">
+        {/* card stattus hubungan */}
         <div className="cardStatusHubungan">
           <div>
-            <p>Status hubungan1</p>
+            <p>Status hubungan</p>
             <p>dengan anak minggu ini</p>
           </div>
           <br />
@@ -26,13 +28,14 @@ const MainContent = () => {
             <img src={smileIcon} width={40} height={40} alt="happy" />
           </div>
         </div>
-
+        {/* card kemajuan hubungan */}
         <div className="cardKemajuanHubungan">
           <div className="chartKemajuanHubungan">
-            <ApexChart></ApexChart>
+            <ChartKemajuanHubungan></ChartKemajuanHubungan>
           </div>
         </div>
 
+        {/* card list intraksi */}
         <div className="cardDaftarInteraksi">
           <div style={{ padding: "0 2em" }}>
             <p>Daftar Interaksi</p>
@@ -72,6 +75,8 @@ const MainContent = () => {
             </ul>
           </div>
         </div>
+
+        {/* card jumlah interaksi */}
         <div className="cardJumlahInteraksi">
           <div className="chartJumlahInteraksi">
             <ApexChart></ApexChart>
