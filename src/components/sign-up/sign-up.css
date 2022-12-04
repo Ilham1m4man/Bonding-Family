@@ -1,0 +1,53 @@
+body{
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.container-fluid{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6%;
+}
+
+.login-form{
+    height: 500px;
+    width: 430px;
+    
+}
+
+.card-title {
+    padding-bottom: 25px;
+    text-align: center;
+    line-height: 42px;
+    padding-top: 20px;
+}
+
+.mb-3{
+    padding : 15px 60px 4px 60px;
+}
+
+.btn-daftar{
+    border-radius: 0.25rem;
+    margin-left: 140px;
+    margin-right: 140px
+
+    /* width: 2%; */
+}
+
+/* button [type="submit"]{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+} */
+
+/* .card-title h5{
+    align-items: center;
+} */
+
+.card{
+    background: rgba(217, 223, 251, 0.5);
+}
