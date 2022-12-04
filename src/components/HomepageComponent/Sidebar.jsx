@@ -1,5 +1,5 @@
 import React from "react";
-import LogoBonding from "../../../public/assets/Images/Logo-Bonding-Family.svg";
+import LogoBonding from "../../assets/Images/Logo-Bonding-Family.svg";
 const Sidebar = () => {
   return (
     <>
