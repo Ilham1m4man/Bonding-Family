@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/Homepage";
+import ProfilePage from "./pages/ProfilePage";
 
 const BondingFams = () => {
   return (
@@ -8,6 +9,7 @@ const BondingFams = () => {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Routes>
       </main>
     </>
