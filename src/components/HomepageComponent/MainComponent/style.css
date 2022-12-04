@@ -1,0 +1,107 @@
+.cardStatusHubungan,
+.cardKemajuanHubungan,
+.cardDaftarInteraksi,
+.cardJumlahInteraksi {
+  border: 1px solid #d6d6d6;
+  border-radius: 20px;
+  width: 500px;
+  height: 300px;
+}
+.cardStatusHubungan p {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 500px;
+  line-height: 10px;
+}
+.statusHubungan p {
+  margin-left: 75px;
+  font-size: 45px;
+  font-weight: 600;
+}
+.statusHubungan {
+  background-color: #c7f1fc;
+  box-shadow: 0px 23px 9px rgba(3, 39, 48, 0.02),
+    0px 13px 8px rgba(3, 39, 48, 0.08), 0px 6px 6px rgba(3, 39, 48, 0.13),
+    0px 1px 3px rgba(3, 39, 48, 0.15), 0px 0px 0px rgba(3, 39, 48, 0.15);
+  border-radius: 10px;
+}
+
+.cardStatusHubungan {
+  background-image: url(../../../assets/Images/Status-hubungan-background.png);
+  background-repeat: no-repeat;
+}
+.cardStatusHubungan img {
+  margin: 2em 0.5em;
+}
+.mainContent {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  row-gap: 3em;
+  column-gap: 3em;
+}
+.listInteraksi li {
+  font-size: 25px;
+  font-weight: 500;
+}
+.cardDaftarInteraksi {
+  background-color: rgba(253, 209, 247, 0.1);
+}
+.cardDaftarInteraksi p {
+  font-weight: bold;
+  font-size: 30px;
+}
+.listInteraksi input {
+  width: 25px;
+  border-radius: 100px;
+}
+.yAxis h3 {
+  color: #2e3f90;
+  font-size: 16px;
+  font-weight: 500;
+}
+.xAxis h3 {
+  color: #454459;
+  font-size: 16px;
+  font-weight: 400;
+}
+.yAxis {
+  line-height: 4.5em;
+}
+.yAxis .memburukBar {
+  margin-bottom: 1em !important;
+}
+.bar {
+  margin-top: 10em;
+  margin-right: 2.5em;
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+progress::-webkit-progress-value {
+  background-color: #a08cfb !important;
+  border-radius: 10px !important;
+}
+progress::-webkit-progress-bar {
+  background-color: #b388eb57;
+  border-radius: 10px !important;
+}
+progress::-moz-progress-bar {
+  background-color: #b388eb57 !important;
+}
+progress {
+  background-color: #b388eb57;
+}
+
+progress {
+  border-radius: 10px !important;
+}
+.titleChard {
+  color: #000000;
+  margin-top: -0.3em;
+  margin-bottom: 0.5em;
+  font-weight: 500;
+  font-size: 27px;
+  text-align: center;
+}
