@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import MainContent from "../components/HomepageComponent/MainComponent/Main";
-import WelcomeToApp from "../components/HomepageComponent/SectionTop/Welcome";
+import WelcomeToApp from "../components/HomepageComponent/Welcome";
 import Sidebar from "../components/HomepageComponent/Sidebar/Sidebar";
 import SidebarCopy from "../components/HomepageComponent/Sidebar/Sidebar copy";
+import "../main.css";
 
 const HomePage = () => {
   const [isSidebar, setSidebar] = useState(false);
@@ -41,7 +41,6 @@ const HomePage = () => {
           <WelcomeToApp openSidebar={openSidebar}></WelcomeToApp>
           <br />
 
-          <MainContent></MainContent>
         </div>
       </div>
     </>
