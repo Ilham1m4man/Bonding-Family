@@ -1,7 +1,24 @@
+:root {
+  --pure_white: 255, 255, 255;
+  --grey-100: 214, 214, 214;
+  --grey-300: 128, 128, 128;
+  --cornflower_blue-800: 58, 75, 158;
+  --cornflower_blue-600: 105, 123, 213;
+  --sky_blue_crayola-200: 170, 235, 250;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   padding: 0;
   margin: 0;
   font-family: "Red Hat Display", sans-serif;
+}
+
+.hamburgerIcon {
+  display: none;
 }
 
 /* Responsive */
@@ -10,18 +27,22 @@ body {
     display: block;
     margin-top: 1em;
   }
-  .hamburgerIcon :hover {
+
+  .hamburgerIcon:hover {
     cursor: pointer;
   }
+
   .sidebar {
     display: none;
   }
+
   .closeSidebar {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin-right: 1em;
     margin-bottom: 2em;
   }
+
   #closeSidebar {
     display: block;
     width: 30px;
@@ -30,60 +51,47 @@ body {
     margin-left: 1em;
     margin-top: -2em;
   }
+
   .closeSidebar :hover {
     cursor: pointer;
   }
+
   .closeSidebar {
     right: 0;
   }
+
   .sidebar {
-    background-color: rgb(239, 245, 251);
+    background-color: rgb(var(--cornflower_blue-600));
     height: 100%;
-    width: 50%;
+    width: 85%;
     z-index: 100;
     position: fixed;
     padding: 3em 0;
+    border-right: 1px solid rgb(var(--grey-100));
   }
+
   .logo img {
     width: 125px;
     height: 100px;
   }
+
   .profileName {
     display: none;
   }
+
   .logo {
-    margin: 0 7em;
-  }
-  .iconFiturSidebar img {
-    width: 25px;
-  }
-  .iconFiturSidebar p {
-    font-size: 25px;
-  }
-  .welcomText {
-    display: none;
-  }
-  .profileOnMobileWidth {
-    display: block;
+    background-color: transparent;
   }
 
-  .mainContent {
-    display: grid;
-    grid-template-columns: repeat(1, auto);
-    column-gap: 3em;
+  .iconFiturSidebar p {
+    font-size: 16px;
   }
-  .cardStatusHubungan,
-  .cardKemajuanHubungan,
-  .cardDaftarInteraksi,
-  .cardJumlahInteraksi {
-    border: 1px solid #d6d6d6;
-    border-radius: 20px;
-    height: 300px;
-    width: auto;
+
+  .iconFiturSidebar svg {
+    width: 20px;
   }
-  .cardStatusHubungan {
-    background-color: rgba(253, 209, 247, 0.1);
-    background-image: none;
-    background-repeat: no-repeat;
+
+  .profileOnMobileWidth {
+    display: block;
   }
 }
