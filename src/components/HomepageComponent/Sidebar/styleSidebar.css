@@ -1,5 +1,6 @@
 :root {
   --pure_white: 255, 255, 255;
+  --pure_black: 0, 0, 0;
   --grey-100: 214, 214, 214;
   --grey-300: 128, 128, 128;
   --cornflower_blue-800: 58, 75, 158;
@@ -10,10 +11,10 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  max-height: 100vh;
   overflow: hidden;
-  border-right: 1px solid rgb(var(--grey-100));
+  width: 350px;
+  height: 100vh;
+  border-right: 1px solid rgba(var(--grey-100));
 }
 
 .sidebarFitur {
@@ -23,10 +24,10 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
   gap: 1em;
-  color: rgba(128, 128, 128, 1);
+  color: rgba(var(--grey-300));
   font-weight: 500;
-  font-size: 28px;
-  padding: 0.5em 0;
+  font-size: 24px;
+  padding: 1.3em 0.5em;
 }
 
 .sidebarFitur::-webkit-scrollbar {
@@ -42,29 +43,25 @@
   display: flex;
   align-items: center;
   gap: 1.9em;
-  margin: 0 1em;
-  padding: 0.079em 1em;
+  padding: 0 2em;
   transition: all 300ms ease-in-out;
 }
 
-.iconFiturSidebar>svg:hover,
 .iconFiturSidebar:hover {
   cursor: pointer;
-  color: rgb(var(--cornflower_blue-800));
-  fill: rgb(var(--cornflower_blue-800));
+  color: rgba(var(--cornflower_blue-800));
 }
 
-.buttonActive {
-  background-color: rgb(var(--cornflower_blue-600));
-  color: rgb(var(--pure_white));
-  fill: rgb(var(--pure_white));
+.sidebarFitur-active {
+  color: rgba(var(--pure_white));
+  background-color: rgba(var(--cornflower_blue-600));
 }
 
 .logo {
   position: sticky;
   top: 0;
-  padding: 24px 0;
-  background-color: rgb(var(--pure_white));
+  padding: 16px 0 10px 0;
+  background-color: transparent;
   display: flex;
   justify-content: center;
 }
@@ -74,22 +71,28 @@
   display: flex;
   justify-content: center;
   bottom: 0;
+  height: 65px;
   background-color: rgb(var(--pure_white));
   border-top: 1px solid rgb(var(--grey-100));
-  padding: 0.5em;
+  padding: 0.3em;
   margin: 0;
+  margin-top: auto;
 }
 
 .profileName div {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 1em;
   padding-left: 1em;
-  width: 310px;
-  color: rgba(0, 0, 0, 1);
+  width: 250px;
+  color: rgba(var(--pure_black));
   font-weight: 500;
-  font-size: 28px;
+  font-size: 24px;
+}
+
+.profileName img {
+  margin-right: 1.5em;
+  width: 50px;
 }
 
 .profileActive {
