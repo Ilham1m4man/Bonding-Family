@@ -145,9 +145,15 @@ a {
   .hamburgerIcon {
     display: block;
   }
-
-  .hamburgerIcon:hover {
+  .hamburgerIcon :hover {
     cursor: pointer;
+  }
+
+  .sectionTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 2em;
   }
 
   .sectionTop {
@@ -176,7 +182,6 @@ a {
     justify-content: flex-end;
     right: 0;
   }
-
   #closeSidebar {
     display: block;
     width: 30px;
@@ -195,7 +200,6 @@ a {
     z-index: 100;
     position: fixed;
   }
-
   .profileName {
     display: none;
   }
@@ -203,7 +207,6 @@ a {
   .iconFiturSidebar svg {
     width: 25px;
   }
-
   .iconFiturSidebar p {
     font-size: 25px;
   }
@@ -226,5 +229,8 @@ a {
 
   .mainContent {
     padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    column-gap: 3em;
   }
 }
