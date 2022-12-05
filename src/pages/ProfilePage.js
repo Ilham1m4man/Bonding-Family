@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import WelcomeToApp from "../components/HomepageComponent/Welcome";
+import MainContent from "../components/HomepageComponent/MainComponent/Main";
+import NavbarMobile from "../components/HomepageComponent/SectionTop/NavbarMobile";
 import Sidebar from "../components/HomepageComponent/Sidebar/Sidebar";
 import SidebarCopy from "../components/HomepageComponent/Sidebar/Sidebar copy";
 
@@ -33,9 +34,9 @@ const ProfilePage = () => {
           </div>
         )}
 
-        <div className="profileContent" style={{ margin: "2em 3em", width: "100%" }}>
-          <WelcomeToApp openSidebar={openSidebar}></WelcomeToApp>
-
+        <div className="profileContentRightSide">
+          <NavbarMobile openSidebar={openSidebar}></NavbarMobile>
+          <MainContent></MainContent>
         </div>
       </div>
     </>
