@@ -14,49 +14,60 @@
 .mainContent {
   display: grid;
   place-items: center;
-  margin-top: auto;
+  height: 100%;
 }
 
 .profile-container {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   grid-template-rows: 1fr 2fr;
-  row-gap: 2em;
-  column-gap: 1em;
+  row-gap: 3em;
+  column-gap: 3em;
   background-color: rgba(var(--sky_blue_crayola-100), 0.7);
   padding: 30px;
   border-radius: 20px;
-  width: 55vw;
+  width: 85%;
   backdrop-filter: blur(5px);
 }
 
 .profile-contents {
   background-color: rgba(var(--pure_white));
   border-radius: 20px;
+  box-shadow: 0px 0px 0px 0px rgba(3, 39, 48, 0.08),
+   0px 8px 17px 0px rgba(3, 39, 48, 0.08),
+   0px 32px 32px 0px rgba(3, 39, 48, 0.07),
+   0px 71px 43px 0px rgba(3, 39, 48, 0.04),
+   0px 127px 51px 0px rgba(3, 39, 48, 0.01),
+   0px 198px 56px 0px rgba(3, 39, 48, 0);
 }
 
 .foto-container {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 .foto-container img {
   border-radius: 20px 20px 0 0;
-  width: 380px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
 }
 
 #profile-section {
   grid-row-start: 1;
   grid-row-end: 3;
-  width: 380px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   gap: 1em;
 }
 
 .profile_saya-container {
+  margin-bottom: auto;
   padding: 0 20px;
+  width: 85%;
 }
 
 .profile_saya-container h1 {
@@ -66,9 +77,9 @@
 
 #form-profile-saya {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
   grid-template-rows: 1fr 1fr;
-  row-gap: 1.5em;
+  row-gap: 2em;
   column-gap: 1em;
 }
 
@@ -129,6 +140,7 @@
   border: none;
   outline: none;
   font-size: 32px;
+  margin-bottom: 20px;
 }
 
 #pengaturan-section {
@@ -145,16 +157,12 @@
   margin-top: 30px;
 }
 
-.notif-container {
+.notif_switch-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-}
-
-.notif-container p {
   font-size: 24px;
-  margin: 0;
 }
 
 #pengaturan-section button {
