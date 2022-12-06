@@ -18,10 +18,6 @@ const MainContent = () => {
     event.preventDefault();
   };
 
-  const onGantiPassHandler = (event) => {
-    event.preventDefault();
-  };
-
   const onKeluarHandler = (event) => {
     event.preventDefault();
   };
@@ -87,7 +83,7 @@ const MainContent = () => {
           </div>
           <div id="pengaturan-section" className="profile-contents">
             <h3>Pengaturan</h3>
-            <div className="notif-container">
+            <div className="notif_switch-container">
               <p>Notifikasi</p>
                 <Switch
                   onChange={onNotifToggleChange}
@@ -97,11 +93,10 @@ const MainContent = () => {
                   onColor="#5CC1DA"
                   offColor="#CCCCCC"
                   width={48}
-                  handleDiameter={23}
+                  handleDiameter={24}
                   className="react-switch"
                 />
             </div>
-            <button onClick={onGantiPassHandler}>Ganti Password</button>
             <button onClick={onKeluarHandler}>Keluar</button>
           </div>
         </div>
