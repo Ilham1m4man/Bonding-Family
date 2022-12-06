@@ -17,7 +17,7 @@ const ProfilePage = () => {
   };
   return (
     <>
-      <div style={{ display: "flex" }}>
+      <div id="profile-page">
         {isSidebar === false ? (
           isSidebar === false
         ) : (
