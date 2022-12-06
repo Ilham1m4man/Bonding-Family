@@ -17,6 +17,10 @@ body {
   font-family: "Red Hat Display", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 #profile-page {
   box-sizing: border-box;
   display: flex;
