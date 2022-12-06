@@ -7,21 +7,20 @@ const Sidebar = ({ closeSidebar }) => {
   return (
     <>
       <div className="sidebar" id="sidebar">
-        <aside className="closeSidebarSection">
-          <div className="closeSidebar">
-            <div>{/*  */}</div>
-            <img
-              onClick={closeSidebar}
-              id="closeSidebar"
-              src={closeIconSidebar}
-              alt="close sidebar"
-            />
-          </div>
-        </aside>
-
-          <div className="logo">
-            <img src={LogoBonding} alt="logo bonding family"></img>
-          </div>
+        <div className="logo">
+          <aside className="closeSidebarSection">
+            <div className="closeSidebar">
+              <div>{/*  */}</div>
+              <img
+                onClick={closeSidebar}
+                id="closeSidebar"
+                src={closeIconSidebar}
+                alt="close sidebar"
+              />
+            </div>
+          </aside>
+          <img src={LogoBonding} alt="logo bonding family"></img>
+        </div>
         <section className="sidebarFitur">
           <div className="iconFiturSidebar">
             <svg width="32" height="42" viewBox="0 0 32 42">
@@ -32,7 +31,7 @@ const Sidebar = ({ closeSidebar }) => {
             </svg>
             <p>Survey</p>
           </div>
-          <br />
+
           <div className="iconFiturSidebar">
             <svg width="32" height="34" viewBox="0 0 32 34">
               <path
@@ -42,7 +41,7 @@ const Sidebar = ({ closeSidebar }) => {
             </svg>
             <p>Jadwal</p>
           </div>
-          <br />
+
           <div className="iconFiturSidebar">
             <svg width="32" height="28" viewBox="0 0 32 28">
               <path
@@ -52,7 +51,7 @@ const Sidebar = ({ closeSidebar }) => {
             </svg>
             <p>Interaksi</p>
           </div>
-          <br />
+
           <div className="iconFiturSidebar">
             <svg width="32" height="46" viewBox="0 0 32 46">
               <path
@@ -62,13 +61,11 @@ const Sidebar = ({ closeSidebar }) => {
             </svg>
             <p>Tips & Trik</p>
           </div>
-          <br />
         </section>
         <section className="profileName">
-          <hr></hr>
           <div>
             <img src={ProfileAvatar} alt="profile picture" />
-            <h3>Dzikri Ardafi</h3>
+            <p>Dzikri Ardafi</p>
           </div>
         </section>
       </div>
