@@ -1,83 +1,108 @@
 import React from "react";
-
-import ApexChart from "../Chart/chart1";
-import ChartKemajuanHubungan from "../Chart/chart2";
+import useInput from "../../../utils/useInput";
+import fotoProfile from "../../../assets/Images/Foto_profile.png";
+import Switch from "react-switch";
+import useToggle from "../../../utils/useToggle";
 import "./style.css";
+
 const MainContent = () => {
+  const [namaProfile, onNamaProfileChange] = useInput("John Doe");
+  const [nomorHpProfile, onNomorHpProfileChange] = useInput("+6212-3456-7890");
+  const [emailProfile, onEmailProfileChange] = useInput("Johndoe@email.com");
+  const [jamIstirahat, onJamIstirahatChange] = useInput("12");
+  const [menitIstirahat, onMenitIstirahatChange] = useInput("00");
+
+  const [notifToggle, onNotifToggleChange] = useToggle();
+
+  const onSubmitHandler = (event) => {
+    event.preventDefault();
+  };
+
+  const onGantiPassHandler = (event) => {
+    event.preventDefault();
+  };
+
+  const onKeluarHandler = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <>
       <div className="mainContent">
-        {/* card stattus hubungan */}
-        <div className="cardStatusHubungan">
-          <div>
-            <p>Status hubungan</p>
-            <p>dengan anak minggu ini</p>
+        <div className="profile-container">
+          <div id="profile-section" className="profile-contents">
+            <div className="foto-container">
+              <img src={fotoProfile} alt="Foto profil anda" />
+            </div>
+            <div className="profile_saya-container">
+              <h1>Profile Saya</h1>
+              <form onSubmit={onSubmitHandler} id="form-profile-saya">
+                <input
+                  className="input-form"
+                  id="nama-profile"
+                  type="text"
+                  placeholder={namaProfile}
+                  onChange={onNamaProfileChange}
+                  value={namaProfile}
+                />
+                <input
+                  className="input-form"
+                  id="nomor_hp-profile"
+                  type="text"
+                  placeholder={nomorHpProfile}
+                  onChange={onNomorHpProfileChange}
+                  value={nomorHpProfile}
+                />
+                <input
+                  className="input-form"
+                  id="email-profile"
+                  type="email"
+                  placeholder={emailProfile}
+                  onChange={onEmailProfileChange}
+                  value={emailProfile}
+                />
+              </form>
+            </div>
+            <button type="submit" id="simpan-button">
+              Simpan
+            </button>
           </div>
-          <br />
-          <br />
-          <div
-            className="statusHubungan"
-            style={{
-              display: "flex",
-              width: "340px",
-              margin: "auto",
-            }}
-          >
-            <p>Sedang 😊</p>
+          <div id="jam_istirahat-section" className="profile-contents">
+            <h3>Jam Istirahat Kerja</h3>
+            <div id="jam_istirahat">
+              <input
+                type="text"
+                placeholder={jamIstirahat}
+                onChange={onJamIstirahatChange}
+                value={jamIstirahat}
+              />
+              <p>:</p>
+              <input
+                type="text"
+                placeholder={menitIstirahat}
+                onChange={onMenitIstirahatChange}
+                value={menitIstirahat}
+              />
+            </div>
           </div>
-        </div>
-        {/* card kemajuan hubungan */}
-        <div className="cardKemajuanHubungan">
-          <div className="chartKemajuanHubungan">
-            <ChartKemajuanHubungan></ChartKemajuanHubungan>
-          </div>
-        </div>
-
-        {/* card list intraksi */}
-        <div className="cardDaftarInteraksi">
-          <div style={{ padding: "0 2em" }}>
-            <p>Daftar Interaksi</p>
-            <hr style={{ marginTop: "-1em" }} />
-          </div>
-
-          <div style={{ padding: "0 2em 0 1em" }}>
-            <ul style={{ lineHeight: "3em" }}>
-              <div
-                className="listInteraksi"
-                style={{ display: "flex", justifyContent: "space-between" }}
-              >
-                <li>Bercanda</li>
-                <input type="checkbox" />
-              </div>
-              <div
-                className="listInteraksi"
-                style={{ display: "flex", justifyContent: "space-between" }}
-              >
-                <li>Ngobrol Kesukaan</li>
-                <input style={{ borderRadius: "100px" }} type="checkbox" />
-              </div>
-              <div
-                className="listInteraksi"
-                style={{ display: "flex", justifyContent: "space-between" }}
-              >
-                <li>Main Tebak Tebakan</li>
-                <input type="checkbox" />
-              </div>
-              <div
-                className="listInteraksi"
-                style={{ display: "flex", justifyContent: "space-between" }}
-              >
-                <li>Bertanya kegiatan anak</li>
-                <input type="checkbox" />
-              </div>
-            </ul>
-          </div>
-        </div>
-
-        {/* card jumlah interaksi */}
-        <div className="cardJumlahInteraksi">
-          <div className="chartJumlahInteraksi">
-            <ApexChart></ApexChart>
+          <div id="pengaturan-section" className="profile-contents">
+            <h3>Pengaturan</h3>
+            <div className="notif-container">
+              <p>Notifikasi</p>
+              <Switch
+                onChange={onNotifToggleChange}
+                checked={notifToggle}
+                uncheckedIcon={false}
+                checkedIcon={false}
+                onColor="#5CC1DA"
+                offColor="#CCCCCC"
+                width={48}
+                handleDiameter={23}
+                className="react-switch"
+              />
+            </div>
+            <button onClick={onGantiPassHandler}>Ganti Password</button>
+            <button onClick={onKeluarHandler}>Keluar</button>
           </div>
         </div>
       </div>
