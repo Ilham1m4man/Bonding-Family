@@ -5,7 +5,8 @@ Web app that helps parents to create a bond and stay connected to their children
 
 1. Designing the UI ✔
 2. Implementing the UI
-3. Making the content
+3. Making the content ✔
+4. Implementing App logic
 
 
 
