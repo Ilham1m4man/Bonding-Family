@@ -145,7 +145,8 @@ a {
   .hamburgerIcon {
     display: block;
   }
-  .hamburgerIcon :hover {
+
+  .hamburgerIcon:hover {
     cursor: pointer;
   }
 
@@ -154,6 +155,8 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 4px 2em;
+    background-color: rgba(var(--pure_white));
+    border-bottom: 1px solid rgba(var(--grey-100));
   }
 
   .sectionTop {
@@ -182,6 +185,7 @@ a {
     justify-content: flex-end;
     right: 0;
   }
+
   #closeSidebar {
     display: block;
     width: 30px;
@@ -199,7 +203,9 @@ a {
     height: 100%;
     z-index: 100;
     position: fixed;
+
   }
+
   .profileName {
     display: none;
   }
@@ -207,6 +213,7 @@ a {
   .iconFiturSidebar svg {
     width: 25px;
   }
+
   .iconFiturSidebar p {
     font-size: 25px;
   }
@@ -232,5 +239,5 @@ a {
     display: grid;
     grid-template-columns: repeat(1, auto);
     column-gap: 3em;
-  }
+  } */
 }
