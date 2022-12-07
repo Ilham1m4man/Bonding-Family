@@ -1,14 +1,15 @@
 import React from "react";
 import CreateNavTemplate from "../templates/template-creator";
-import JadwalMainContent from "../../components/JadwalPageComponent/JadwalMainContent";
+import "../../styles/jadwal-page-style.css";
 
 const JadwalPage = () => {
   return (
     <>
-      <CreateNavTemplate></CreateNavTemplate>
-      <JadwalMainContent></JadwalMainContent>
+      <div id="jadwal-page">
+        <CreateNavTemplate></CreateNavTemplate>
+      </div>
     </>
-  )
-}
+  );
+};
 
 export default JadwalPage;
