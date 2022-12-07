@@ -9,12 +9,15 @@
 }
 
 .sidebar {
+  position: fixed;
+  z-index: 100;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   width: 350px;
-  height: 100vh;
+  height: 100%;
   border-right: 1px solid rgba(var(--grey-100));
+  background-color: rgba(var(--pure_white));
 }
 
 .sidebarFitur {
@@ -23,9 +26,7 @@
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  gap: 1em;
-  font-weight: 500;
-  font-size: 24px;
+  gap: 2em;
   padding: 1.3em 0.5em;
 }
 
@@ -43,8 +44,15 @@
   align-items: center;
   gap: 1.9em;
   padding: 0 2em;
+  font-weight: 500;
+  font-size: 24px;
   color: rgba(var(--grey-300));
   transition: all 300ms ease-in-out;
+}
+
+.iconFiturSidebar p {
+  margin: 0;
+  padding: 20px 0;
 }
 
 .iconFiturSidebar:hover {
@@ -99,6 +107,11 @@
 #profile-background img {
   margin-right: 1.5em;
   width: 50px;
+}
+
+#profile-background p {
+  padding: 0;
+  margin: 0;
 }
 
 .profileActive {
