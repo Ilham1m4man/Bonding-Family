@@ -2,6 +2,7 @@
 import LogoBonding from "../../assets/Images/Logo-Bonding-Family.svg";
 import ProfileAvatar from "../../assets/icons/Avatar-profile.svg";
 import { Link } from "react-router-dom";
+import path from "../../utils/path-name";
 import "../../styles/styleSidebar.css";
 
 const SidebarCopy = () => {
@@ -10,11 +11,13 @@ const SidebarCopy = () => {
       <div className="sidebar">
         <div className="logoBondingFams">
           <div className="logo">
-            <img src={LogoBonding} alt="logo bonding family"></img>
+            <Link to={{ pathname: path.home }}>
+              <img src={LogoBonding} alt="logo bonding family"></img>
+            </Link>
           </div>
         </div>
         <section className="sidebarFitur">
-          <Link to={{ pathname: `/survey` }}>
+          <Link to={{ pathname: path.survey }}>
             <div className="iconFiturSidebar">
               <svg width="25" height="42" viewBox="0 0 32 42">
                 <path
@@ -25,7 +28,7 @@ const SidebarCopy = () => {
               <p>Survey</p>
             </div>
           </Link>
-          <Link to={{ pathname: `/jadwal` }}>
+          <Link to={{ pathname: path.jadwal }}>
             <div className="iconFiturSidebar">
               <svg width="25" height="34" viewBox="0 0 32 34">
                 <path
@@ -36,7 +39,7 @@ const SidebarCopy = () => {
               <p>Jadwal</p>
             </div>
           </Link>
-          <Link to={{ pathname: `/interaksi` }}>
+          <Link to={{ pathname: path.interaksi }}>
             <div className="iconFiturSidebar">
               <svg width="25" height="28" viewBox="0 0 32 28">
                 <path
@@ -47,7 +50,7 @@ const SidebarCopy = () => {
               <p>Interaksi</p>
             </div>
           </Link>
-          <Link to={{ pathname: `/tipsNtrick` }}>
+          <Link to={{ pathname: path.tipsNTrick }}>
             <div className="iconFiturSidebar">
               <svg width="25" height="46" viewBox="0 0 32 46">
                 <path
@@ -61,7 +64,7 @@ const SidebarCopy = () => {
         </section>
         <section className="profileName">
           <Link
-            to={{ pathname: `/profile` }}
+            to={{ pathname: path.profile }}
             /* onClick={addActiveIndicatorHandler} */
           >
             <div id="profile-background">
