@@ -3,6 +3,7 @@ import LogoBonding from "../../assets/Images/Logo-Bonding-Family.svg";
 import ProfileAvatar from "../../assets/icons/Avatar-profile.svg";
 import closeIconSidebar from "../../assets/icons/close-icon.png";
 import { Link } from "react-router-dom";
+import path from "../../utils/path-name";
 import "../../styles/styleSidebar.css";
 
 const Sidebar = ({ closeSidebar }) => {
@@ -21,11 +22,13 @@ const Sidebar = ({ closeSidebar }) => {
               />
             </div>
           </aside>
-          <img src={LogoBonding} alt="logo bonding family"></img>
+          <Link to={{ pathname: path.home }}>
+            <img src={LogoBonding} alt="logo bonding family"></img>
+          </Link>
         </div>
         <section className="sidebarFitur">
-          <div className="iconFiturSidebar">
-            <Link to={{ pathname: `/survey` }}>
+          <Link to={{ pathname: path.survey }}>
+            <div className="iconFiturSidebar">
               <svg width="25" height="42" viewBox="0 0 32 42">
                 <path
                   fill="currentColor"
@@ -33,11 +36,10 @@ const Sidebar = ({ closeSidebar }) => {
                 />
               </svg>
               <p>Survey</p>
-            </Link>
-          </div>
-
-          <div className="iconFiturSidebar">
-            <Link to={{ pathname: `/jadwal` }}>
+            </div>
+          </Link>
+          <Link to={{ pathname: path.jadwal }}>
+            <div className="iconFiturSidebar">
               <svg width="25" height="34" viewBox="0 0 32 34">
                 <path
                   fill="currentColor"
@@ -45,11 +47,10 @@ const Sidebar = ({ closeSidebar }) => {
                 />
               </svg>
               <p>Jadwal</p>
-            </Link>
-          </div>
-
-          <div className="iconFiturSidebar">
-            <Link to={{ pathname: `/interaksi` }}>
+            </div>
+          </Link>
+          <Link to={{ pathname: path.interaksi }}>
+            <div className="iconFiturSidebar">
               <svg width="25" height="28" viewBox="0 0 32 28">
                 <path
                   fill="currentColor"
@@ -57,11 +58,10 @@ const Sidebar = ({ closeSidebar }) => {
                 />
               </svg>
               <p>Interaksi</p>
-            </Link>
-          </div>
-
-          <div className="iconFiturSidebar">
-            <Link to={{ pathname: `/tipsNtrick` }}>
+            </div>
+          </Link>
+          <Link to={{ pathname: path.tipsNTrick }}>
+            <div className="iconFiturSidebar">
               <svg width="25" height="46" viewBox="0 0 32 46">
                 <path
                   fill="currentColor"
@@ -69,12 +69,15 @@ const Sidebar = ({ closeSidebar }) => {
                 />
               </svg>
               <p>Tips & Trik</p>
-            </Link>
-          </div>
+            </div>
+          </Link>
         </section>
         <section className="profileName">
-          <Link to={{ pathname: `/profile` }}>
-            <div>
+          <Link
+            to={{ pathname: path.profile }}
+            /* onClick={addActiveIndicatorHandler} */
+          >
+            <div id="profile-background">
               <img src={ProfileAvatar} alt="profile picture" />
               <p>Dzikri Ardafi</p>
             </div>
