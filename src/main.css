@@ -34,6 +34,13 @@ a {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  height: 100vh;
+}
+
+#profile-page {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
   min-height: 100vh;
   height: 100%;
 }
@@ -154,7 +161,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 4px 2em;
+    padding: 0 2em;
     background-color: rgba(var(--pure_white));
     border-bottom: 1px solid rgba(var(--grey-100));
   }
@@ -203,7 +210,6 @@ a {
     height: 100%;
     z-index: 100;
     position: fixed;
-
   }
 
   .profileName {
@@ -239,5 +245,5 @@ a {
     display: grid;
     grid-template-columns: repeat(1, auto);
     column-gap: 3em;
-  } */
+  }
 }
