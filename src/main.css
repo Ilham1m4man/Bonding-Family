@@ -17,19 +17,45 @@ body {
   font-family: "Red Hat Display", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
+#sidebar-navbar-page {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+
 #profile-page {
   box-sizing: border-box;
   display: flex;
-  height: 100vh;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .profileContentRightSide {
   display: flex;
   flex-direction: column;
   background-image: url(./assets/Images/Background-profile-page.png);
-  background-size: cover;
+  background-size: contain;
+  background-position: right bottom;
   background-repeat: no-repeat;
   width: 100vw;
+}
+
+.contentRightSide {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.mainContent {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  padding-left: 350px;
 }
 
 /* Responsive */
@@ -49,10 +75,15 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+  .mainContent {
+    place-items: start;
+  }
+
   .profile-container {
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: 1fr 0.25fr 0.5fr;
     column-gap: 0;
+    height: 100%;
   }
   
   #profile-section {
@@ -66,6 +97,9 @@ body {
 }
 
 @media only screen and (max-width: 1087px) {
+  .notif {
+    margin: 5px 15px;
+  }
   .hamburgerIcon {
     display: block;
   }
@@ -78,7 +112,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 4px 2em;
+    padding: 0 2em;
     background-color: rgba(var(--pure_white));
     border-bottom: 1px solid rgba(var(--grey-100));
   }
@@ -149,9 +183,7 @@ body {
     margin: 20px;
   }
 
-  /* .mainContent {
-    display: grid;
-    grid-template-columns: repeat(1, auto);
-    column-gap: 3em;
-  } */
+  .mainContent {
+    padding-left: 0;
+  }
 }

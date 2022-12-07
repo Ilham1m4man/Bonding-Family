@@ -9,12 +9,15 @@
 }
 
 .sidebar {
+  position: fixed;
+  z-index: 100;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   width: 350px;
-  height: 100vh;
+  height: 100%;
   border-right: 1px solid rgba(var(--grey-100));
+  background-color: rgba(var(--pure_white));
 }
 
 .sidebarFitur {
@@ -23,10 +26,7 @@
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  gap: 1em;
-  color: rgba(var(--grey-300));
-  font-weight: 500;
-  font-size: 24px;
+  gap: 2em;
   padding: 1.3em 0.5em;
 }
 
@@ -44,7 +44,15 @@
   align-items: center;
   gap: 1.9em;
   padding: 0 2em;
+  font-weight: 500;
+  font-size: 24px;
+  color: rgba(var(--grey-300));
   transition: all 300ms ease-in-out;
+}
+
+.iconFiturSidebar p {
+  margin: 0;
+  padding: 20px 0;
 }
 
 .iconFiturSidebar:hover {
@@ -71,7 +79,6 @@
   display: flex;
   justify-content: center;
   bottom: 0;
-  height: 65px;
   background-color: rgb(var(--pure_white));
   border-top: 1px solid rgb(var(--grey-100));
   padding: 0.3em;
@@ -79,20 +86,32 @@
   margin-top: auto;
 }
 
-.profileName div {
+#profile-background {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding-left: 1em;
   width: 250px;
+  height: 65px;
   color: rgba(var(--pure_black));
   font-weight: 500;
   font-size: 24px;
+  border-radius: 20px;
+  transition: all 250ms ease-in-out;
 }
 
-.profileName img {
+#profile-background:hover {
+  background-color: rgb(var(--sky_blue_crayola-200));
+}
+
+#profile-background img {
   margin-right: 1.5em;
   width: 50px;
+}
+
+#profile-background p {
+  padding: 0;
+  margin: 0;
 }
 
 .profileActive {

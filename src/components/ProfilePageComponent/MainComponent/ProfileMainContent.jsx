@@ -3,9 +3,9 @@ import useInput from "../../../utils/useInput";
 import fotoProfile from "../../../assets/Images/Foto_profile.png";
 import Switch from "react-switch";
 import useToggle from "../../../utils/useToggle";
-import "./style.css";
+import "../../../styles/profile-main-comp-style.css";
 
-const MainContent = () => {
+const ProfileMainContent = () => {
   const [namaProfile, onNamaProfileChange] = useInput("John Doe");
   const [nomorHpProfile, onNomorHpProfileChange] = useInput("+6212-3456-7890");
   const [emailProfile, onEmailProfileChange] = useInput("Johndoe@email.com");
@@ -104,4 +104,4 @@ const MainContent = () => {
     </>
   );
 };
-export default MainContent;
+export default ProfileMainContent;

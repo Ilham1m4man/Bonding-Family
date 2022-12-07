@@ -1,8 +1,8 @@
 import React from "react";
-import HamburgerIcon from "../../../assets/icons/Hamburger-Icon.svg";
+import HamburgerIcon from "../../assets/icons/Hamburger-Icon.svg";
 import Notif from "./Notif";
 import ProfileIcon from "./ProfileIcon";
-import "./navbar-style.css";
+import "../../styles/navbar-style.css";
 
 const NavbarMobile = ({ openSidebar }) => {
   return (
