@@ -11,12 +11,6 @@
   --sky_blue_crayola-500: 92, 193, 218;
 }
 
-.mainContent {
-  display: grid;
-  place-items: center;
-  height: 100%;
-}
-
 .profile-container {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -26,7 +20,7 @@
   background-color: rgba(var(--sky_blue_crayola-100), 0.7);
   padding: 30px;
   border-radius: 20px;
-  width: 85%;
+  width: 80%;
   backdrop-filter: blur(5px);
 }
 
@@ -66,13 +60,14 @@
 
 .profile_saya-container {
   margin-bottom: auto;
-  padding: 0 20px;
   width: 85%;
 }
 
 .profile_saya-container h1 {
-  font-size: 28px;
-  margin-top: 0;
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 25px;
 }
 
 #form-profile-saya {
@@ -121,9 +116,10 @@
 }
 
 #jam_istirahat-section h3 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 20px 0;
+  /* white-space: nowrap; */
 }
 
 #jam_istirahat {
@@ -152,7 +148,8 @@
 }
 
 #pengaturan-section h3 {
-  font-size: 28px;
+  font-size: 25px;
+  font-weight: 700;
   margin-bottom: 0;
   margin-top: 30px;
 }
@@ -162,14 +159,14 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 #pengaturan-section button {
   cursor: pointer;
   font-family: "Red Hat Display", sans-serif;
   display: block;
-  font-size: 24px;
+  font-size: 22px;
   background-color: transparent;
   border: none;
   color: rgba(var(--persian_red));
