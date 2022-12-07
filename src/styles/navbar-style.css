@@ -31,7 +31,9 @@
 
 .notif {
   cursor: pointer;
+  position: relative;
   display: flex;
+  flex-direction: row;
   padding: 15px 0;
   background-color: transparent;
   border: none;
@@ -41,11 +43,11 @@
   padding: 10px;
   border-radius: 50px;
   stroke: rgb(var(--pure_black));
-  
   transition: all 250ms ease;
 }
 
 .notif:hover > svg {
+  background-color: rgb(var(--pure_white));
   box-shadow: 0 15px 30px -20px rgba(var(--pure_black), 0.5);
 }
 
@@ -56,14 +58,12 @@
 }
 
 .notif-indicator {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  place-items: center;
   width: 30px;
   height: 30px;
-  position: relative;
-  top: -10px;
-  right: 20px;
+  position: absolute;
+  top: 10px;
+  left: 30px;
   font-size: 20px;
   color: rgb(var(--pure_white));
   border-radius: 50px;
