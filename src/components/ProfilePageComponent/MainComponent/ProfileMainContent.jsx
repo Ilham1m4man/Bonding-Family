@@ -24,7 +24,7 @@ const ProfileMainContent = () => {
 
   return (
     <>
-      <div className="mainContent">
+      <div className="mainContent" id="profile-main-content">
         <div className="profile-container">
           <div id="profile-section" className="profile-contents">
             <div className="foto-container">

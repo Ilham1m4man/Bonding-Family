@@ -11,6 +11,10 @@
   --sky_blue_crayola-500: 92, 193, 218;
 }
 
+#profile-main-content {
+  column-gap: 0;
+}
+
 .profile-container {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
