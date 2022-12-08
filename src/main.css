@@ -97,6 +97,14 @@ a {
 }
 
 @media only screen and (max-width: 1087px) {
+  .mainContent {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    column-gap: 3em;
+  }
+  .welcomText {
+    display: none;
+  }
   .notif {
     margin: 5px 15px;
   }

@@ -1,0 +1,47 @@
+.sectionTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hamburgerIcon {
+  display: none;
+}
+.sectionTop h2 {
+  font-size: 25px;
+  font-weight: 500;
+}
+.profileOnMobileWidth {
+  display: none;
+  width: 50px;
+  height: 50px;
+  margin-left: 1em;
+}
+.sectionTop h1 {
+  font-size: 35px;
+  margin-top: -20px;
+  font-weight: 500;
+}
+.notif img {
+  margin-top: 1em;
+  display: flex;
+}
+.sectionTop {
+  padding-left: 350px;
+}
+.notif {
+  display: flex;
+}
+.notif p {
+  padding: 2px;
+  background-color: #e16f3e;
+  margin-left: -5px;
+  height: 20px;
+  color: white;
+  font-weight: bolder;
+  border-radius: 15px;
+}
+.chartKemajuanHubungan,
+.chartJumlahInteraksi {
+  padding: 1em;
+  background-color: rgba(179, 136, 235, 0.05);
+}

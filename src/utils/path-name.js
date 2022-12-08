@@ -1,13 +1,13 @@
 const path = {
   error404: "*",
-  home: "/home",
+  home: "/",
   survey: "/survey",
   jadwal: "/jadwal",
   interaksi: "/interaksi",
   tipsNTrick: "/tipsNtrick",
   profile: "/profile",
   register: "/register",
-  login: "/"
+  login: "/login",
 };
 
 export default path;
