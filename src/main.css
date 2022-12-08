@@ -85,7 +85,7 @@ a {
     column-gap: 0;
     height: 100%;
   }
-  
+
   #profile-section {
     grid-row-start: 1;
     grid-row-end: 2;
@@ -151,7 +151,6 @@ a {
     height: 100%;
     z-index: 100;
     position: fixed;
-
   }
 
   .profileName {
@@ -176,7 +175,6 @@ a {
     padding: 0;
     row-gap: 0;
     column-gap: 0;
-
   }
 
   .profile-contents {
