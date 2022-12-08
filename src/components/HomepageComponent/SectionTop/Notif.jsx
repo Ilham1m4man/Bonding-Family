@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
 import NotifIcon from "../../../assets/icons/Notif-icon.svg";
 import ProfileAvatar from "../../../assets/icons/Avatar-profile.svg";
@@ -9,11 +10,13 @@ const Notif = () => {
       <div className="notif">
         <img src={NotifIcon} width={50} alt="notifikasi" />
         <p>2</p>
-        <img
-          className="profileOnMobileWidth"
-          src={ProfileAvatar}
-          alt="profile picture"
-        />
+        <div className="sectionProfile">
+          <img
+            className="profileOnMobileWidth"
+            src={ProfileAvatar}
+            alt="profile picture"
+          />
+        </div>
       </div>
     </>
   );

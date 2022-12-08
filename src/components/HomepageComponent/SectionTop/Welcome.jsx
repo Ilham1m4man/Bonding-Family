@@ -5,10 +5,10 @@ import "./main.css";
 const WelcomeToApp = ({ openSidebar }) => {
   return (
     <>
-      <div className="sectionTop">
+      <div className="sectionTop" id="sectionTop-homePage">
         <div className="welcomText">
           <h2>Hi Dzikri Ardafi,</h2>
-          <h1>Welcome Back 👋</h1>
+          <h1>Welcome 👋</h1>
         </div>
         <div className="hamburgerIcon" id="hamburgerIcon">
           <img onClick={openSidebar} src={HamburgerIcon} alt="Menu" />
