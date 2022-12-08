@@ -1,16 +1,21 @@
-:root {
-  --pure_white: 255, 255, 255;
-  --pure_black: 0, 0, 0;
-  --venetian-red: 225, 111, 62, 1;
-  --cornflower_blue-600: 105, 123, 213;
-  --sky_blue_crayola-200: 170, 235, 250;
-}
+@import '../main.css';
 
 .sectionTop {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 0;
+  margin-left: 350px;
+  padding-left: 20px;
+}
+
+.sectionTop:has(h1) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin-left: 350px;
+  padding-left: 40px;
 }
 
 .notif-profile {

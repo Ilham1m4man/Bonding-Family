@@ -1,4 +1,5 @@
-import CreateNavTemplate from "../templates/template-creator";
+import React from "react";
+import CreateNavTemplate from "../templates/CreateNavTemplate";
 
 const ProfilePage = () => {
   return (
