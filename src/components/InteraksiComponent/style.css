@@ -1,0 +1,47 @@
+.seringCard {
+  width: 340px;
+  height: 350px;
+  padding: 1em 2em;
+  border-radius: 10px;
+  background: #697bd5;
+  box-shadow: 0px 220px 88px rgba(0, 0, 0, 0.01),
+    0px 124px 74px rgba(0, 0, 0, 0.05), 0px 55px 55px rgba(0, 0, 0, 0.09),
+    0px 14px 30px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+.jarangCard {
+  width: 340px;
+  height: 350px;
+  padding: 1em 2em;
+  border-radius: 10px;
+  background: #d16ed2;
+  box-shadow: 0px 220px 88px rgba(0, 0, 0, 0.01),
+    0px 124px 74px rgba(0, 0, 0, 0.05), 0px 55px 55px rgba(0, 0, 0, 0.09),
+    0px 14px 30px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+.durasiCard {
+  width: 635px;
+  padding: 1em 2em;
+  margin-left: 5em;
+  border-radius: 10px;
+  background: #7956a7;
+  box-shadow: 0px 220px 88px rgba(0, 0, 0, 0.01),
+    0px 124px 74px rgba(0, 0, 0, 0.05), 0px 55px 55px rgba(0, 0, 0, 0.09),
+    0px 14px 30px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+.titleCardSering {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 48px;
+}
+.listInteraksi {
+  font-size: 32px;
+  font-weight: 500;
+  color: white;
+}
+#chartDurasi {
+  background-color: white;
+  border-radius: 20px;
+}
