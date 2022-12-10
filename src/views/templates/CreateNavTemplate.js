@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import JadwalMainContent from "../../components/JadwalPageComponent/JadwalMainContent";
+import TambahJadwalComponent from "../../components/JadwalPageComponent/TambahJadwalComponent";
 import ProfileMainContent from "../../components/ProfilePageComponent/MainComponent/ProfileMainContent";
 import NavbarMobile from "../../components/SectionTop/NavbarMobile";
 import Sidebar from "../../components/Sidebar/Sidebar";
@@ -21,17 +22,20 @@ const CreateNavTemplate = () => {
   } else if (location.pathname === path.jadwal) {
     // TO DO: Bikin isian/content jadwal page (IN WORK BY ILHAM)
     pageSaatIni = <JadwalMainContent key={2}></JadwalMainContent>;
+  } else if (location.pathname === path.tambahJadwal) {
+    // TO DO: Bikin isian/content jadwal page (IN WORK BY ILHAM)
+    pageSaatIni = <TambahJadwalComponent key={3}></TambahJadwalComponent>;
   } else if (location.pathname === path.interaksi) {
     // TO DO: Bikin isian/content interaksi page
-    /* pageSaatIni = <InteraksiMainContent key={3}></InteraksiMainContent>; */
+    /* pageSaatIni = <InteraksiMainContent key={4}></InteraksiMainContent>; */
     pageSaatIni = <h1>Interaksi</h1>;
   } else if (location.pathname === path.tipsNTrick) {
     // TO DO: Bikin isian/content tips&trick page
-    /* pageSaatIni = <TipsNTrickMainContent key={4}></TipsNTrickMainContent>; */
+    /* pageSaatIni = <TipsNTrickMainContent key={5}></TipsNTrickMainContent>; */
     pageSaatIni = <h1>Tips & Trick</h1>;
   } else if (location.pathname === path.profile) {
     // TO DO: Bikin isian/content profile page (FINISHED BY ILHAM)
-    pageSaatIni = <ProfileMainContent key={5}></ProfileMainContent>;
+    pageSaatIni = <ProfileMainContent key={6}></ProfileMainContent>;
   }
 
   const [isSidebar, setSidebar] = useState(false);
@@ -47,7 +51,7 @@ const CreateNavTemplate = () => {
   return (
     <>
       <div
-        id={pageSaatIni.key === "5" ? "profile-page" : "sidebar-navbar-page"}
+        id={pageSaatIni.key === "6" ? "profile-page" : "sidebar-navbar-page"}
       >
         {isSidebar === false ? (
           isSidebar === false
@@ -66,7 +70,7 @@ const CreateNavTemplate = () => {
         )}
         <div
           className={
-            pageSaatIni.key === "5"
+            pageSaatIni.key === "6"
               ? "profileContentRightSide"
               : "contentRightSide"
           }
