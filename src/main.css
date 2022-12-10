@@ -10,7 +10,9 @@
   --sky_blue_crayola-200: 170, 235, 250;
   --sky_blue_crayola-500: 92, 193, 218;
 }
-
+.sectionTop {
+  display: none;
+}
 body {
   padding: 0;
   margin: 0;
@@ -35,7 +37,6 @@ a {
   min-height: 100vh;
   height: 100%;
 }
-
 .profileContentRightSide {
   display: flex;
   flex-direction: column;
@@ -51,12 +52,23 @@ a {
   flex-direction: column;
   width: 100vw;
 }
-
+.cardInteraksiPage {
+  display: grid;
+  grid-template-columns: repeat(2, 30em);
+  justify-content: center;
+  row-gap: 3em;
+  column-gap: 1em;
+  margin-top: 2em;
+  margin-left: 450px;
+}
 .mainContent {
   display: grid;
   place-items: center;
   height: 100%;
   padding-left: 350px;
+}
+.none {
+  display: none;
 }
 
 /* Responsive */
@@ -98,6 +110,24 @@ a {
 }
 
 @media only screen and (max-width: 1087px) {
+  .cardInteraksiPage {
+    display: inline;
+    margin: 0;
+  }
+  .none {
+    display: block;
+  }
+  .mainCardInteraksi {
+    display: flex;
+    justify-content: center;
+  }
+  .seringCard,
+  .jarangCard,
+  .durasiCard {
+    margin: 2em 10em;
+    width: auto;
+  }
+
   .sectionProfile {
     display: block;
   }
@@ -127,6 +157,7 @@ a {
     padding: 0 2em;
     background-color: rgba(var(--pure_white));
     border-bottom: 1px solid rgba(var(--grey-100));
+    width: 100%;
   }
 
   .sidebar {

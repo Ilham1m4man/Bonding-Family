@@ -13,7 +13,6 @@ const NavbarMobile = ({ openSidebar }) => {
         </div>
         <div className="notif-profile">
           <Notif></Notif>
-
           <ProfileIcon></ProfileIcon>
         </div>
       </div>
