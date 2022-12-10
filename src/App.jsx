@@ -4,6 +4,8 @@ import ProfilePage from "./views/pages/ProfilePage";
 import JadwalPage from "./views/pages/JadwalPage";
 import HomePage from "./views/pages/Homepage";
 import InteraksiPage from "./views/pages/Interaksi";
+import LoginPage from "./pages/Loginpage";
+import SignUp from "./pages/SignUp";
 import "./main.css";
 
 const BondingFams = () => {
@@ -15,6 +17,8 @@ const BondingFams = () => {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/interaksi" element={<InteraksiPage />} />
           <Route path="/jadwal" element={<JadwalPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/sign-up" element={<SignUp />} />
         </Routes>
       </main>
     </>

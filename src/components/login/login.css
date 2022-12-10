@@ -1,53 +1,43 @@
-body{
-    font-size: 12px;
-    padding: 0;
-    margin: 0;
-    height: 100%;
+.input {
+  width: 390px;
+  height: 50px;
+  left: 210px;
+  top: 215px;
+  border-radius: 10px;
+  border: 2px solid #b3bef7;
+  margin: 1em 0;
+  padding-left: 1em;
+}
+.buttonLogin {
+  background-color: #697bd5;
+  border-radius: 15px;
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+  border: none;
+  height: 70px;
+  width: 150px;
+  margin-top: 1.5em;
+}
+.buttonLogin:hover {
+  cursor: pointer;
 }
 
-.container-fluid{
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    padding-top: 6%;
+.cardLogin {
+  margin: 4em auto;
+  padding: auto;
+  background: rgba(217, 223, 251, 0.5);
+  border-radius: 20px;
+  width: 810px;
+  height: auto;
+  padding: 3em;
 }
-
-.login-form{
-    height: 500px;
-    width: 430px;
-    
+.cardLogin h3 {
+  color: #223383;
+  font-size: 35px;
+  font-weight: 700;
+  text-align: center;
 }
-
-.card-title {
-    padding-bottom: 25px;
-    text-align: center;
-    line-height: 42px;
-    padding-top: 20px;
-}
-
-.mb-3{
-    padding : 15px 60px 4px 60px;
-}
-
-.btn-daftar{
-    border-radius: 0.25rem;
-    margin-left: 140px;
-    margin-right: 140px
-
-    /* width: 2%; */
-}
-
-/* button [type="submit"]{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-} */
-
-/* .card-title h5{
-    align-items: center;
-} */
-
-.card{
-    background: rgba(217, 223, 251, 0.5);
+.formInput {
+  margin-left: 13em;
 }
