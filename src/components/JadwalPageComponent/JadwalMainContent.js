@@ -4,41 +4,84 @@ import Select from "react-select";
 import { Checkbox } from "antd";
 import CreateJadwalTemplate from "../../views/templates/CreateJadwalTemplate";
 import { useState } from "react";
-
-/* console.log(new Date().toLocaleDateString("id-ID", { weekday: "long" })); */
-/* const tanggalSekarang = */
-/* 
-var curr = new Date(); // get current date
-
-var first = curr.getDate() - curr.getDay();
-var firstday = new Date(curr.setDate(first + 1)).toString();
-for (var i = 1; i < 6; i++) {
-  var next = new Date(curr.getTime());
-  next.setDate(first + i);
-  console.log(
-    next.toLocaleDateString("id-ID", {
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    })
-  );
-} */
-/* console.log(new Date(2022, 1)); */
-/* Date.prototype.getMonthWeek = function(){
-  var firstDay = new Date(this.getFullYear(), this.getMonth(), 1).getDay();
-  console.log("firstday " + firstDay);
-  return Math.ceil((this.getDate() + firstDay)/7);
-}
-console.log(new Date().getMonthWeek()); */
-
-/* console.log(dayjs().day()); */
-
-/* console.log(Math.ceil(new Date().getDate() / 7)); */
+import useToggle from "../../utils/useToggle";
+import dayjs from "dayjs";
+import hariPerMinggu from "./DaftarHari";
+import { useCallback } from "react";
 
 const JadwalMainContent = () => {
   const [checked, setChecked] = useState(false);
   const [selectedMonth, setSelectedMonth] = useState(new Date().getMonth());
+  const [week, setWeek] = useState(new Date().getDate());
+  const [daftarTgl, setDaftarTgl] = useState([]);
+  const [disablePrev, onDisablePrevHandler] = useToggle();
+  const [disableNext, onDisableNextHandler] = useToggle();
+  
+  const getDataHari = useCallback(() => {
+    setDaftarTgl(() => hariPerMinggu(week, selectedMonth))
+  }, [week, selectedMonth]);
+  
+  React.useEffect(
+    () => {
+      const numberOfWeek = Math.ceil(week / 7);
+      const curr = new Date();
+      curr.setMonth(selectedMonth);
+      console.log(
+        dayjs(`${curr.getFullYear()}-${curr.getMonth() + 1}`).daysInMonth()
+      );
+      
+
+      if (numberOfWeek === 1) {
+        curr.setDate(1);
+      } else if (numberOfWeek === 2) {
+        curr.setDate(8);
+      } else if (numberOfWeek === 3) {
+        curr.setDate(15);
+      } else if (numberOfWeek === 4) {
+        curr.setDate(22);
+      } else if (numberOfWeek === 5) {
+        curr.setDate(29);
+      }
+      console.log(curr)
+      if (
+        curr.getMonth() === 1 &&
+        dayjs(`${curr.getFullYear()}-${curr.getMonth() + 1}`).daysInMonth() ===
+          29
+      ) {
+        if (curr.getDate() === 1) {
+          onDisablePrevHandler(true);
+        } else if (curr.getDate() > 0 && curr.getDate() < 29) {
+          onDisableNextHandler(false);
+          onDisablePrevHandler(false);
+        } else if (curr.getDate() === 29) {
+          onDisableNextHandler(true);
+        }
+      } else if (
+        curr.getMonth() === 1 &&
+        dayjs(`${curr.getFullYear()}-${curr.getMonth() + 1}`).daysInMonth() ===
+          28
+      ) {
+        if (curr.getDate() === 1) {
+          onDisablePrevHandler(true);
+        } else if (curr.getDate() > 0 && curr.getDate() < 22) {
+          onDisableNextHandler(false);
+          onDisablePrevHandler(false);
+        } else if (curr.getDate() === 22) {
+          onDisableNextHandler(true);
+        }
+      } else {
+        if (curr.getDate() === 1) {
+          onDisablePrevHandler(true);
+        } else if (curr.getDate() > 0 && curr.getDate() < 29) {
+          onDisableNextHandler(false);
+          onDisablePrevHandler(false);
+        } else if (curr.getDate() === 29) {
+          onDisableNextHandler(true);
+        }
+      }
+      getDataHari();
+    }, [getDataHari]);
+  
 
   const monthOptions = [
     { value: "1", label: "Januari" },
@@ -57,14 +100,6 @@ const JadwalMainContent = () => {
   const bulanSaatIni = new Date().getMonth();
   const defaultMonthOption = monthOptions[bulanSaatIni];
 
-  const weekOptions = [
-    { value: "1", label: "Minggu 1" },
-    { value: "2", label: "Minggu 2" },
-    { value: "3", label: "Minggu 3" },
-    { value: "4", label: "Minggu 4" },
-  ];
-  const defaultWeekOption = weekOptions[0];
-
   const onBulanChangeHandler = (inputValue) => {
     const _value = inputValue.value;
     const bulanTerpilih = new Date();
@@ -73,56 +108,90 @@ const JadwalMainContent = () => {
     setSelectedMonth(bulanTerpilih.getMonth());
   };
 
-  /* for (let i = 1; i < 6; i++) { */
-    const minggu = new Date();
-    minggu.setMonth(2);
-    minggu.setDate(1);
-    
-
-    const options = {
-      weekday: "long",
-      month: "long",
-      day: "numeric",
-    };
-  console.log(minggu.toLocaleDateString("id-ID", options));
-
-  const onMingguChangeHandler = () => {
-
-    console.log(selectedMonth);
-  };
+ 
 
   const onCheckedChangeHandler = (event) => {
     setChecked(event.target.checked);
   };
 
+  const onNextHandler = () => {
+    setWeek(week + 7);
+  };
+  const onPrevHandler = () => {
+    setWeek(week - 7);
+  };
+
   return (
     <>
       <div id="jadwal-page" className="mainContent">
+        <div className="page-title">
+          <h1>Jadwal</h1>
+        </div>
         <div id="jadwal-container">
-          <Checkbox
-            id="checkbox"
-            onChange={onCheckedChangeHandler}
-            defaultChecked={checked}
-          >
-            Atur jadwal sesuai jam istirahat
-          </Checkbox>
+          <div id="checkbox-container">
+            <Checkbox
+              className="checkbox-jadwal"
+              onChange={onCheckedChangeHandler}
+              defaultChecked={checked}
+            >
+              Atur jadwal sesuai jam istirahat
+            </Checkbox>
+          </div>
           <div className="filter-container">
             <Select
+              
               className="filter-bulan"
               options={monthOptions}
               defaultValue={defaultMonthOption}
               onChange={onBulanChangeHandler}
             />
-
-            <Select
-              className="filter-minggu"
-              options={weekOptions}
-              defaultValue={defaultWeekOption}
-              onChange={onMingguChangeHandler}
-            />
+            <div className="arrow-container">
+              <button
+                disabled={disablePrev}
+                onClick={onPrevHandler}
+                type="button"
+                id="prev-arrow"
+                className="jadwal-arrow"
+              >
+                <svg
+                  width="22"
+                  height="11"
+                  viewBox="0 0 22 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 1.5L11.2703 9.5L1 1.5"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </button>
+              <button
+                disabled={disableNext}
+                onClick={onNextHandler}
+                type="button"
+                id="next-arrow"
+                className="jadwal-arrow"
+              >
+                <svg
+                  width="22"
+                  height="11"
+                  viewBox="0 0 22 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 1.5L11.2703 9.5L1 1.5"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
           <div id="jadwal-harian">
-            <CreateJadwalTemplate></CreateJadwalTemplate>
+              <CreateJadwalTemplate daftarTgl={daftarTgl}></CreateJadwalTemplate>
           </div>
         </div>
       </div>
