@@ -3,6 +3,7 @@ const path = {
   home: "/",
   survey: "/survey",
   jadwal: "/jadwal",
+  tambahJadwal: "/tambahJadwal",
   interaksi: "/interaksi",
   tipsNTrick: "/tipsNtrick",
   profile: "/profile",
