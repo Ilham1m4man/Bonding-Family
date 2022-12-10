@@ -4,10 +4,13 @@ const FormSignUp = () => {
   return (
     <>
       <div className="cardLogin">
-        <h3>Masuk</h3>
+        <h3>Daftar</h3>
         <div className="wrapperComponent">
           <div className="formInput">
             <form>
+              <div>
+                <input placeholder="Nama" className="input" />
+              </div>
               <div>
                 <input placeholder="Email" className="input" type="email" />
               </div>
@@ -18,12 +21,19 @@ const FormSignUp = () => {
                   type="password"
                 />
               </div>
+              <div>
+                <input
+                  placeholder="Konfirmasi Password"
+                  className="input"
+                  type="password"
+                />
+              </div>
             </form>
           </div>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <div />
             <button className="buttonLogin" type="submit">
-              Masuk
+              Daftar
             </button>
           </div>
         </div>

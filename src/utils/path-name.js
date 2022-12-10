@@ -8,6 +8,7 @@ const path = {
   profile: "/profile",
   register: "/register",
   login: "/login",
+  signUp: "/sign-up",
 };
 
 export default path;
