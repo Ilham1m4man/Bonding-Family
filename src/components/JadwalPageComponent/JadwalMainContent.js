@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/jadwal-main-comp-style.css";
 import Select from "react-select";
-import { Checkbox } from "antd";
+/* import { Checkbox } from "antd"; */
 import CreateJadwalTemplate from "../../views/templates/CreateJadwalTemplate";
 import { useState } from "react";
 import useToggle from "../../utils/useToggle";
@@ -10,7 +10,7 @@ import hariPerMinggu from "./DaftarHari";
 import { useCallback } from "react";
 
 const JadwalMainContent = () => {
-  const [checked, setChecked] = useState(false);
+  /* const [checked, setChecked] = useState(false); */
   const [selectedMonth, setSelectedMonth] = useState(new Date().getMonth());
   const [week, setWeek] = useState(new Date().getDate());
   const [daftarTgl, setDaftarTgl] = useState([]);
@@ -108,11 +108,9 @@ const JadwalMainContent = () => {
     setSelectedMonth(bulanTerpilih.getMonth());
   };
 
- 
-
-  const onCheckedChangeHandler = (event) => {
+  /* const onCheckedChangeHandler = (event) => {
     setChecked(event.target.checked);
-  };
+  }; */
 
   const onNextHandler = () => {
     setWeek(week + 7);
@@ -128,7 +126,7 @@ const JadwalMainContent = () => {
           <h1>Jadwal</h1>
         </div>
         <div id="jadwal-container">
-          <div id="checkbox-container">
+          {/* <div id="checkbox-container">
             <Checkbox
               className="checkbox-jadwal"
               onChange={onCheckedChangeHandler}
@@ -136,7 +134,7 @@ const JadwalMainContent = () => {
             >
               Atur jadwal sesuai jam istirahat
             </Checkbox>
-          </div>
+          </div> */}
           <div className="filter-container">
             <Select
               
