@@ -1,5 +1,5 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import ProfilePage from "./views/pages/ProfilePage";
 import JadwalPage from "./views/pages/JadwalPage";
 import HomePage from "./views/pages/Homepage";
@@ -9,6 +9,14 @@ import SignUp from "./views/pages/SignUp";
 import "./main.css";
 
 const BondingFams = () => {
+  const navigate = useNavigate();
+  const getAccesstoken = localStorage.getItem("token-bonding-family");
+  useEffect(() => {
+    if (!getAccesstoken) {
+      navigate("/login");
+    }
+  }, []);
+
   return (
     <>
       <main>

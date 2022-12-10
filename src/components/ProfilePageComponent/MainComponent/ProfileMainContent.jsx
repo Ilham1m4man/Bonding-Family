@@ -4,8 +4,10 @@ import fotoProfile from "../../../assets/Images/Foto_profile.png";
 import Switch from "react-switch";
 import useToggle from "../../../utils/useToggle";
 import "../../../styles/profile-main-comp-style.css";
+import { useNavigate } from "react-router";
 
 const ProfileMainContent = () => {
+  const navigate = useNavigate();
   const [namaProfile, onNamaProfileChange] = useInput("John Doe");
   const [nomorHpProfile, onNomorHpProfileChange] = useInput("+6212-3456-7890");
   const [emailProfile, onEmailProfileChange] = useInput("Johndoe@email.com");
@@ -20,6 +22,12 @@ const ProfileMainContent = () => {
 
   const onKeluarHandler = (event) => {
     event.preventDefault();
+    const accessToken = localStorage.getItem("token-bonding-family");
+    localStorage.removeItem("token-bonding-family");
+    if (!accessToken) {
+      alert("Berhasil keluar");
+      navigate("/login");
+    }
   };
 
   return (
@@ -85,17 +93,17 @@ const ProfileMainContent = () => {
             <h3>Pengaturan</h3>
             <div className="notif_switch-container">
               <p>Notifikasi</p>
-                <Switch
-                  onChange={onNotifToggleChange}
-                  checked={notifToggle}
-                  uncheckedIcon={false}
-                  checkedIcon={false}
-                  onColor="#5CC1DA"
-                  offColor="#CCCCCC"
-                  width={48}
-                  handleDiameter={24}
-                  className="react-switch"
-                />
+              <Switch
+                onChange={onNotifToggleChange}
+                checked={notifToggle}
+                uncheckedIcon={false}
+                checkedIcon={false}
+                onColor="#5CC1DA"
+                offColor="#CCCCCC"
+                width={48}
+                handleDiameter={24}
+                className="react-switch"
+              />
             </div>
             <button onClick={onKeluarHandler}>Keluar</button>
           </div>
