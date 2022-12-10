@@ -4,8 +4,8 @@ import ProfilePage from "./views/pages/ProfilePage";
 import JadwalPage from "./views/pages/JadwalPage";
 import HomePage from "./views/pages/Homepage";
 import InteraksiPage from "./views/pages/Interaksi";
-import LoginPage from "./pages/Loginpage";
-import SignUp from "./pages/SignUp";
+import LoginPage from "./views/pages/Loginpage";
+import SignUp from "./views/pages/SignUp";
 import "./main.css";
 
 const BondingFams = () => {
