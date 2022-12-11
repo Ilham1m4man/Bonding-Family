@@ -7,6 +7,7 @@ import InteraksiPage from "./views/pages/Interaksi";
 import LoginPage from "./views/pages/Loginpage";
 import SignUp from "./views/pages/SignUp";
 import TambahJadwalPage from "./views/pages/TambahJadwalPage";
+import Surveypage from "./views/pages/Survey";
 import "./main.css";
 import path from "./utils/path-name";
 
@@ -30,6 +31,7 @@ const BondingFams = () => {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path={path.tambahJadwal} element={<TambahJadwalPage />} />
+          <Route path="/survey" element={<Surveypage />} />
         </Routes>
       </main>
     </>
