@@ -226,6 +226,10 @@
   transition: all 250ms ease-in-out;
 }
 
+#tambah-button {
+  padding: 4px 0;
+}
+
 .jadwal-buttons:hover {
   stroke: rgba(var(--pure_white), 0.5);
 }

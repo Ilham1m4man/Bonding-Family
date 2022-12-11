@@ -42,7 +42,7 @@ const JadwalMainContent = () => {
       } else if (numberOfWeek === 5) {
         curr.setDate(29);
       }
-      console.log(curr)
+
       if (
         curr.getMonth() === 1 &&
         dayjs(`${curr.getFullYear()}-${curr.getMonth() + 1}`).daysInMonth() ===

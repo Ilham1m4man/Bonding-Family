@@ -165,7 +165,7 @@ h1 {
 }
 
 @media only screen and (max-width: 768px) {
-  .mainContent {
+  #jadwal-page {
     place-items: start;
   }
 
@@ -392,13 +392,9 @@ h1 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-  }
-
-  #jadwal-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    width: 100%;
+    gap: 0;
+    place-self: center;
   }
 
   .page-title {
@@ -412,14 +408,7 @@ h1 {
     justify-content: flex-start;
     width: 85%;
   }
-
-  #jadwal-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
+  
   .page-title {
     display: block;
     width: 85%;

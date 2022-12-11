@@ -27,7 +27,7 @@ const hariPerMinggu = (week, selectedMonth) => {
         28 &&
       curr.getMonth() === 1
     ) {
-      if (numberOfWeek === 5 && next.getDate() === 28) {
+      if (/* numberOfWeek === 5 && */ next.getDate() === 28) {
         if (next.getDay() === 0 || next.getDay() === 6) {
           console.log("sabtu/minggu cuk tgl 28" + i);
           break;
@@ -55,7 +55,7 @@ const hariPerMinggu = (week, selectedMonth) => {
         29 &&
       curr.getMonth() === 1
     ) {
-      if (numberOfWeek === 5 && next.getDate() === 29) {
+      if (/* numberOfWeek === 5 && */ next.getDate() === 29) {
         if (next.getDay() === 0 || next.getDay() === 6) {
           console.log("sabtu/minggu cuk tgl 29" + i);
           break;
@@ -81,7 +81,7 @@ const hariPerMinggu = (week, selectedMonth) => {
     } else if (
       dayjs(`${curr.getFullYear()}-${curr.getMonth() + 1}`).daysInMonth() === 31
     ) {
-      if (numberOfWeek === 5 && next.getDate() === 31) {
+      if (/* numberOfWeek === 5 && */ next.getDate() === 31) {
         if (next.getDay() === 0 || next.getDay() === 6) {
           console.log("sabtu/minggu cuk tgl 31" + i);
           break;
@@ -107,7 +107,7 @@ const hariPerMinggu = (week, selectedMonth) => {
     } else if (
       dayjs(`${curr.getFullYear()}-${curr.getMonth() + 1}`).daysInMonth() === 30
     ) {
-      if (numberOfWeek === 5 && next.getDate() === 30) {
+      if (/* numberOfWeek === 5 && */ next.getDate() === 30) {
         if (next.getDay() === 0 || next.getDay() === 6) {
           console.log("sabtu/minggu cuk tgl 30" + i);
           break;

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import MainContent from "../components/HomepageComponent/MainComponent/Main";
-import NavbarMobile from "../components/HomepageComponent/SectionTop/NavbarMobile";
-import Sidebar from "../components/HomepageComponent/Sidebar/Sidebar";
-import SidebarCopy from "../components/HomepageComponent/Sidebar/Sidebar copy";
+import MainContent from "../../components/HomepageComponent/MainComponent/Main";
+import WelcomeToApp from "../../components/HomepageComponent/SectionTop/Welcome";
+import Sidebar from "../../components/Sidebar/Sidebar";
+import SidebarCopy from "../../components/Sidebar/Sidebar copy";
 
 const HomePage = () => {
   const [isSidebar, setSidebar] = useState(false);
@@ -17,7 +17,7 @@ const HomePage = () => {
   };
   return (
     <>
-      <div id="profile-page">
+      <div style={{ display: "flex" }}>
         {isSidebar === false ? (
           isSidebar === false
         ) : (
@@ -34,10 +34,15 @@ const HomePage = () => {
           </div>
         )}
 
-        <div className="profileContentRightSide">
-          <NavbarMobile openSidebar={openSidebar}></NavbarMobile>
+        {<div
+          className="mainContentRightSide"
+          style={{ margin: "2em 3em", width: "100%" }}
+        >
+          <WelcomeToApp openSidebar={openSidebar}></WelcomeToApp>
+          <br />
+
           <MainContent></MainContent>
-        </div>
+        </div>}
       </div>
     </>
   );
