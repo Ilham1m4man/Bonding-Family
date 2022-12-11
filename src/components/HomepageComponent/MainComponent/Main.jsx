@@ -3,11 +3,9 @@ import useInput from "../../../utils/useInput";
 import fotoProfile from "../../../assets/Images/Foto_profile.png";
 import Switch from "react-switch";
 import useToggle from "../../../utils/useToggle";
-import "../../../styles/profile-main-comp-style.css";
-import { useNavigate } from "react-router";
+import "./style.css";
 
-const ProfileMainContent = () => {
-  const navigate = useNavigate();
+const MainContent = () => {
   const [namaProfile, onNamaProfileChange] = useInput("John Doe");
   const [nomorHpProfile, onNomorHpProfileChange] = useInput("+6212-3456-7890");
   const [emailProfile, onEmailProfileChange] = useInput("Johndoe@email.com");
@@ -20,19 +18,17 @@ const ProfileMainContent = () => {
     event.preventDefault();
   };
 
+  const onGantiPassHandler = (event) => {
+    event.preventDefault();
+  };
+
   const onKeluarHandler = (event) => {
     event.preventDefault();
-    const accessToken = localStorage.getItem("token-bonding-family");
-    localStorage.removeItem("token-bonding-family");
-    if (!accessToken) {
-      alert("Berhasil keluar");
-      navigate("/login");
-    }
   };
 
   return (
     <>
-      <div className="mainContent" id="profile-main-content">
+      <div className="mainContent">
         <div className="profile-container">
           <div id="profile-section" className="profile-contents">
             <div className="foto-container">
@@ -91,7 +87,7 @@ const ProfileMainContent = () => {
           </div>
           <div id="pengaturan-section" className="profile-contents">
             <h3>Pengaturan</h3>
-            <div className="notif_switch-container">
+            <div className="notif-container">
               <p>Notifikasi</p>
               <Switch
                 onChange={onNotifToggleChange}
@@ -101,10 +97,11 @@ const ProfileMainContent = () => {
                 onColor="#5CC1DA"
                 offColor="#CCCCCC"
                 width={48}
-                handleDiameter={24}
+                handleDiameter={23}
                 className="react-switch"
               />
             </div>
+            <button onClick={onGantiPassHandler}>Ganti Password</button>
             <button onClick={onKeluarHandler}>Keluar</button>
           </div>
         </div>
@@ -112,4 +109,4 @@ const ProfileMainContent = () => {
     </>
   );
 };
-export default ProfileMainContent;
+export default MainContent;

@@ -1,6 +1,6 @@
 const path = {
   error404: "*",
-  home: "/home",
+  home: "/",
   survey: "/survey",
   jadwal: "/jadwal",
   tambahJadwal: "/tambahJadwal",
@@ -8,7 +8,8 @@ const path = {
   tipsNTrick: "/tipsNtrick",
   profile: "/profile",
   register: "/register",
-  login: "/"
+  login: "/login",
+  signUp: "/sign-up",
 };
 
 export default path;

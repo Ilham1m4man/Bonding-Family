@@ -11,20 +11,15 @@ import path from "../../utils/path-name";
 const CreateNavTemplate = () => {
   const location = useLocation();
   let pageSaatIni;
-  
+
   if (location.pathname === path.home) {
-    
     // TO DO: Bikin isian/content home page (FINSIHED BY DZIKRI)
     /* pageSaatIni = <HomeMainContent key={0}></HomeMainContent>; */
-  
   } else if (location.pathname === path.survey) {
-    
     // TO DO: Bikin isian/content survey page
     /* pageSaatIni = <SurveyMainContent key={1}></SurveyMainContent>; */
     pageSaatIni = <h1>Survey Mingguan</h1>;
-  
   } else if (location.pathname === path.jadwal) {
-    
     // TO DO: Bikin isian/content jadwal page (IN WORK BY ILHAM)
     pageSaatIni = <JadwalMainContent key={2}></JadwalMainContent>;
 
@@ -33,19 +28,14 @@ const CreateNavTemplate = () => {
     pageSaatIni = <TambahJadwalComponent key={3}></TambahJadwalComponent>;
 
   } else if (location.pathname === path.interaksi) {
-    
     // TO DO: Bikin isian/content interaksi page
     /* pageSaatIni = <InteraksiMainContent key={4}></InteraksiMainContent>; */
     pageSaatIni = <h1>Interaksi</h1>;
-  
   } else if (location.pathname === path.tipsNTrick) {
-    
     // TO DO: Bikin isian/content tips&trick page
     /* pageSaatIni = <TipsNTrickMainContent key={5}></TipsNTrickMainContent>; */
     pageSaatIni = <h1>Tips & Trick</h1>;
-  
   } else if (location.pathname === path.profile) {
-
     // TO DO: Bikin isian/content profile page (FINISHED BY ILHAM)
     pageSaatIni = <ProfileMainContent key={6}></ProfileMainContent>;
   }

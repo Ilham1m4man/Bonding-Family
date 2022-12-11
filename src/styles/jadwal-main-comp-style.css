@@ -13,6 +13,21 @@
   display: none;
 }
 
+@import '../main.css';
+
+#jadwal-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: auto;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.page-title {
+  display: none;
+}
+
 #jadwal-container {
   border-radius: 20px;
   width: 85%;

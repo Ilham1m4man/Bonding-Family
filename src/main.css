@@ -14,7 +14,9 @@
   --sky_blue_crayola-500: 92, 193, 218;
   --pum_web-800: 209, 110, 210;
 }
-
+.sectionTop {
+  display: none;
+}
 body {
   padding: 0;
   margin: 0;
@@ -44,6 +46,13 @@ h1 {
   height: 100%;
 }
 
+#profile-page {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  min-height: 100vh;
+  height: 100%;
+}
 .profileContentRightSide {
   display: flex;
   flex-direction: column;
@@ -52,7 +61,6 @@ h1 {
   background-position: right bottom;
   background-repeat: no-repeat;
   width: 100vw;
-  border: 1px solid red;
 }
 
 .contentRightSide {
@@ -60,12 +68,23 @@ h1 {
   flex-direction: column;
   width: 100vw;
 }
-
+.cardInteraksiPage {
+  display: grid;
+  grid-template-columns: repeat(2, 30em);
+  justify-content: center;
+  row-gap: 3em;
+  column-gap: 1em;
+  margin-top: 2em;
+  margin-left: 450px;
+}
 .mainContent {
   display: grid;
   place-items: center;
   height: 100%;
   padding-left: 350px;
+}
+.none {
+  display: none;
 }
 
 /* Responsive */
@@ -165,7 +184,7 @@ h1 {
     gap: 0.7em;
   }
 
-  .judul-jam>p {
+  .judul-jam > p {
     width: 160px;
     font-size: 18px;
   }
@@ -210,6 +229,7 @@ h1 {
     height: 100%;
   }
 
+
   #profile-section {
     grid-row-start: 1;
     grid-row-end: 2;
@@ -221,6 +241,35 @@ h1 {
 }
 
 @media only screen and (max-width: 1087px) {
+  .cardInteraksiPage {
+    display: inline;
+    margin: 0;
+  }
+  .none {
+    display: block;
+  }
+  .mainCardInteraksi {
+    display: flex;
+    justify-content: center;
+  }
+  .seringCard,
+  .jarangCard,
+  .durasiCard {
+    margin: 2em 10em;
+    width: auto;
+  }
+
+  .sectionProfile {
+    display: block;
+  }
+  .mainContent {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    column-gap: 3em;
+  }
+  .welcomText {
+    display: none;
+  }
   .notif {
     margin: 5px 15px;
   }
@@ -257,6 +306,16 @@ h1 {
     display: none;
   }
 
+  .sectionTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+    background-color: rgba(var(--pure_white));
+    border-bottom: 1px solid rgba(var(--grey-100));
+    width: 100%;
+  }
+
   .sidebar {
     display: none;
   }
@@ -291,7 +350,6 @@ h1 {
     height: 100%;
     z-index: 100;
     position: fixed;
-
   }
 
   .profileName {
@@ -316,7 +374,6 @@ h1 {
     padding: 0;
     row-gap: 0;
     column-gap: 0;
-
   }
 
   .profile-contents {
@@ -325,6 +382,35 @@ h1 {
 
   .mainContent {
     padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    column-gap: 3em;
+  }
+
+  #jadwal-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #jadwal-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .page-title {
+    display: block;
+    width: 85%;
+    padding: 0 20px;
+  }
+
+  #tambah-jadwal-title-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 85%;
   }
 
   #jadwal-page {

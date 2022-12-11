@@ -1,13 +1,10 @@
 import React from "react";
-import "../../styles/navbar-style.css";
+import "./navbar-style.css";
 
 const Notif = () => {
   return (
     <>
       <button className="notif">
-        <div className="notif-indicator">
-          <p>2</p>
-        </div>
         <svg
           width="40"
           height="40"
@@ -22,6 +19,9 @@ const Notif = () => {
             strokeLinejoin="round"
           />
         </svg>
+        <div className="notif-indicator">
+          <p>2</p>
+        </div>
       </button>
     </>
   );
