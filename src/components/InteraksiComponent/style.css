@@ -1,4 +1,6 @@
 .seringCard {
+  grid-column-start: 1;
+  grid-column-end: 2;
   width: 340px;
   height: 350px;
   padding: 1em 2em;
@@ -10,6 +12,7 @@
   border-radius: 20px;
 }
 .jarangCard {
+  grid-column-start: 2;
   width: 340px;
   height: 350px;
   padding: 1em 2em;
@@ -21,6 +24,8 @@
   border-radius: 20px;
 }
 .durasiCard {
+  grid-column-start: 1;
+  grid-column-end: 3;
   width: 635px;
   padding: 1em 2em;
   margin-left: 5em;

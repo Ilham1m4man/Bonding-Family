@@ -15,7 +15,7 @@ const NavbarMobile = ({ openSidebar }) => {
   } else if (location.pathname === path.jadwal) {
     judulPage = <h1>Jadwal</h1>;
   } else if (location.pathname === path.interaksi) {
-    judulPage = <h1>Interaksi</h1>;
+    judulPage = <h1 style={{ display: "none" }}>Interaksi</h1>;
   } else if (location.pathname === path.tipsNTrick) {
     judulPage = <h1>Tips & Trik</h1>;
   } else if (location.pathname === path.tambahJadwal) {
