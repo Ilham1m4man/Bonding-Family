@@ -1,13 +1,11 @@
 import React from "react";
 import "./survey.css";
 const SurveyMingguan = () => {
-    return (
-      <>
-        <div className="SurveyCard">
-          <h1 className="titleCardSurvey">Survey Mingguan</h1>
-        </div>
-      </>
-    );
-  };
-  
+  return (
+    <>
+      <div className="SurveyCard"></div>
+    </>
+  );
+};
+
 export default SurveyMingguan;

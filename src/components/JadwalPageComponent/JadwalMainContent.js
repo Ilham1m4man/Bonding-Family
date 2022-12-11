@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import "../../styles/jadwal-main-comp-style.css";
 import Select from "react-select";
@@ -16,72 +17,67 @@ const JadwalMainContent = () => {
   const [daftarTgl, setDaftarTgl] = useState([]);
   const [disablePrev, onDisablePrevHandler] = useToggle();
   const [disableNext, onDisableNextHandler] = useToggle();
-  
+
   const getDataHari = useCallback(() => {
-    setDaftarTgl(() => hariPerMinggu(week, selectedMonth))
+    setDaftarTgl(() => hariPerMinggu(week, selectedMonth));
   }, [week, selectedMonth]);
-  
-  React.useEffect(
-    () => {
-      const numberOfWeek = Math.ceil(week / 7);
-      const curr = new Date();
-      curr.setMonth(selectedMonth);
-      console.log(
-        dayjs(`${curr.getFullYear()}-${curr.getMonth() + 1}`).daysInMonth()
-      );
-      
 
-      if (numberOfWeek === 1) {
-        curr.setDate(1);
-      } else if (numberOfWeek === 2) {
-        curr.setDate(8);
-      } else if (numberOfWeek === 3) {
-        curr.setDate(15);
-      } else if (numberOfWeek === 4) {
-        curr.setDate(22);
-      } else if (numberOfWeek === 5) {
-        curr.setDate(29);
-      }
+  React.useEffect(() => {
+    const numberOfWeek = Math.ceil(week / 7);
+    const curr = new Date();
+    curr.setMonth(selectedMonth);
+    console.log(
+      dayjs(`${curr.getFullYear()}-${curr.getMonth() + 1}`).daysInMonth()
+    );
 
-      if (
-        curr.getMonth() === 1 &&
-        dayjs(`${curr.getFullYear()}-${curr.getMonth() + 1}`).daysInMonth() ===
-          29
-      ) {
-        if (curr.getDate() === 1) {
-          onDisablePrevHandler(true);
-        } else if (curr.getDate() > 0 && curr.getDate() < 29) {
-          onDisableNextHandler(false);
-          onDisablePrevHandler(false);
-        } else if (curr.getDate() === 29) {
-          onDisableNextHandler(true);
-        }
-      } else if (
-        curr.getMonth() === 1 &&
-        dayjs(`${curr.getFullYear()}-${curr.getMonth() + 1}`).daysInMonth() ===
-          28
-      ) {
-        if (curr.getDate() === 1) {
-          onDisablePrevHandler(true);
-        } else if (curr.getDate() > 0 && curr.getDate() < 22) {
-          onDisableNextHandler(false);
-          onDisablePrevHandler(false);
-        } else if (curr.getDate() === 22) {
-          onDisableNextHandler(true);
-        }
-      } else {
-        if (curr.getDate() === 1) {
-          onDisablePrevHandler(true);
-        } else if (curr.getDate() > 0 && curr.getDate() < 29) {
-          onDisableNextHandler(false);
-          onDisablePrevHandler(false);
-        } else if (curr.getDate() === 29) {
-          onDisableNextHandler(true);
-        }
+    if (numberOfWeek === 1) {
+      curr.setDate(1);
+    } else if (numberOfWeek === 2) {
+      curr.setDate(8);
+    } else if (numberOfWeek === 3) {
+      curr.setDate(15);
+    } else if (numberOfWeek === 4) {
+      curr.setDate(22);
+    } else if (numberOfWeek === 5) {
+      curr.setDate(29);
+    }
+
+    if (
+      curr.getMonth() === 1 &&
+      dayjs(`${curr.getFullYear()}-${curr.getMonth() + 1}`).daysInMonth() === 29
+    ) {
+      if (curr.getDate() === 1) {
+        onDisablePrevHandler(true);
+      } else if (curr.getDate() > 0 && curr.getDate() < 29) {
+        onDisableNextHandler(false);
+        onDisablePrevHandler(false);
+      } else if (curr.getDate() === 29) {
+        onDisableNextHandler(true);
       }
-      getDataHari();
-    }, [getDataHari]);
-  
+    } else if (
+      curr.getMonth() === 1 &&
+      dayjs(`${curr.getFullYear()}-${curr.getMonth() + 1}`).daysInMonth() === 28
+    ) {
+      if (curr.getDate() === 1) {
+        onDisablePrevHandler(true);
+      } else if (curr.getDate() > 0 && curr.getDate() < 22) {
+        onDisableNextHandler(false);
+        onDisablePrevHandler(false);
+      } else if (curr.getDate() === 22) {
+        onDisableNextHandler(true);
+      }
+    } else {
+      if (curr.getDate() === 1) {
+        onDisablePrevHandler(true);
+      } else if (curr.getDate() > 0 && curr.getDate() < 29) {
+        onDisableNextHandler(false);
+        onDisablePrevHandler(false);
+      } else if (curr.getDate() === 29) {
+        onDisableNextHandler(true);
+      }
+    }
+    getDataHari();
+  }, [getDataHari]);
 
   const monthOptions = [
     { value: "1", label: "Januari" },
@@ -122,12 +118,13 @@ const JadwalMainContent = () => {
   const customStyles = {
     option: (styles, state) => ({
       ...styles,
-      cursor: 'pointer',
+      cursor: "pointer",
     }),
     control: (styles) => ({
       ...styles,
-      cursor: 'pointer',
-    })};
+      cursor: "pointer",
+    }),
+  };
 
   return (
     <>
@@ -199,7 +196,7 @@ const JadwalMainContent = () => {
             </div>
           </div>
           <div id="jadwal-harian">
-              <CreateJadwalTemplate daftarTgl={daftarTgl}></CreateJadwalTemplate>
+            <CreateJadwalTemplate daftarTgl={daftarTgl}></CreateJadwalTemplate>
           </div>
         </div>
       </div>

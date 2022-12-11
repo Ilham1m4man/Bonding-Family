@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
 import NotifIcon from "../../../assets/icons/Notif-icon.svg";
 import ProfileAvatar from "../../../assets/icons/Avatar-profile.svg";
