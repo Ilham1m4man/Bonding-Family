@@ -6,6 +6,7 @@ import HomePage from "./views/pages/Homepage";
 import InteraksiPage from "./views/pages/Interaksi";
 import LoginPage from "./views/pages/Loginpage";
 import SignUp from "./views/pages/SignUp";
+import Surveypage from "./views/pages/Survey";
 import "./main.css";
 
 const BondingFams = () => {
@@ -27,6 +28,7 @@ const BondingFams = () => {
           <Route path="/jadwal" element={<JadwalPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/survey" element={<Surveypage />} />
         </Routes>
       </main>
     </>
