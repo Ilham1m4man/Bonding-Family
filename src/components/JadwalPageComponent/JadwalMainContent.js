@@ -119,6 +119,16 @@ const JadwalMainContent = () => {
     setWeek(week - 7);
   };
 
+  const customStyles = {
+    option: (styles, state) => ({
+      ...styles,
+      cursor: 'pointer',
+    }),
+    control: (styles) => ({
+      ...styles,
+      cursor: 'pointer',
+    })};
+
   return (
     <>
       <div id="jadwal-page" className="mainContent">
@@ -137,7 +147,7 @@ const JadwalMainContent = () => {
           </div> */}
           <div className="filter-container">
             <Select
-              
+              styles={customStyles}
               className="filter-bulan"
               options={monthOptions}
               defaultValue={defaultMonthOption}

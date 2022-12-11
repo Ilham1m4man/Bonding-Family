@@ -269,6 +269,7 @@
 }
 
 .display-jam {
+  cursor: pointer;
   background-color: transparent;
   border: none;
   font-size: 46px;
@@ -281,6 +282,7 @@
 }
 
 .display-jam[is-active~="true"] {
+  cursor: pointer;
   background-color: rgba(var(--cornflower_blue-600));
   border: none;
   color: rgba(var(--pure_white));
@@ -349,17 +351,40 @@
 }
 
 .tambah-jadwal-buttons {
+  cursor: pointer;
   border: none;
   background-color: transparent;
   font-size: 24px;
   font-weight: 500;
   padding: 20px 30px;
+  transition: all 100ms ease-in-out;
 }
 
 #simpan-jadwal-button {
   background-color: rgba(var(--cornflower_blue-600));
   color: rgba(var(--pure_white));
   border-radius: 15px;
+}
+
+#simpan-jadwal-button:active,
+#simpan-jadwal-button:focus,
+#simpan-jadwal-button:hover {
+  background-color: rgba(var(--cornflower_blue-800));
+}
+
+#batal-jadwal-button {
+  border-radius: 15px;
+}
+
+#batal-jadwal-button:hover,
+#batal-jadwal-button:focus {
+  color: rgba(var(--pum_web-800));
+  border-radius: 15px;
+}
+
+#batal-jadwal-button:active {
+  color: rgba(var(--pure_white));
+  background-color: rgba(var(--pum_web-800));
 }
 
 #tambah-jadwal-container {
