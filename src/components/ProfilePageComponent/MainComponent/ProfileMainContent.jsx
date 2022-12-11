@@ -1,25 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import useInput from "../../../utils/useInput";
 import fotoProfile from "../../../assets/Images/Foto_profile.png";
 import Switch from "react-switch";
 import useToggle from "../../../utils/useToggle";
 import "../../../styles/profile-main-comp-style.css";
 import { useNavigate } from "react-router";
+import axios from "axios";
+import { ApiURL } from "../../../service/ApiURl";
 
 const ProfileMainContent = () => {
   const navigate = useNavigate();
-  const [namaProfile, onNamaProfileChange] = useInput("John Doe");
-  const [nomorHpProfile, onNomorHpProfileChange] = useInput("+6212-3456-7890");
-  const [emailProfile, onEmailProfileChange] = useInput("Johndoe@email.com");
+  const [namaProfile, onNamaProfileChange] = useState("");
+  const [nomorHpProfile, onNomorHpProfileChange] = useState("");
+  const [emailProfile, onEmailProfileChange] = useState("");
   const [jamIstirahat, onJamIstirahatChange] = useInput("12");
   const [menitIstirahat, onMenitIstirahatChange] = useInput("00");
+  useEffect(() => {
+    axios
+      .get(`${ApiURL}/users/me`)
+      .then((res) => {
+        onNomorHpProfileChange(res.data.data.id);
+        onNamaProfileChange(res.data.data.name);
+        onEmailProfileChange(res.data.data.email);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
 
   const [notifToggle, onNotifToggleChange] = useToggle();
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
   };
-
   const onKeluarHandler = (event) => {
     event.preventDefault();
     const accessToken = localStorage.getItem("token-bonding-family");

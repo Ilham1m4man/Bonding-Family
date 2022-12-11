@@ -4,11 +4,24 @@ import ProfileAvatar from "../../assets/icons/Avatar-profile.svg";
 import { Link, useLocation } from "react-router-dom";
 import path from "../../utils/path-name";
 import "../../styles/styleSidebar.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { ApiURL } from "../../service/ApiURl";
 
 const SidebarCopy = () => {
   const location = useLocation();
   const currentPath = location.pathname;
-
+  const [nameUser, setNameUser] = useState("");
+  useEffect(() => {
+    axios
+      .get(`${ApiURL}/users/me`)
+      .then((res) => {
+        setNameUser(res.data.data.name);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
   return (
     <>
       <div className="sidebar">
@@ -126,7 +139,7 @@ const SidebarCopy = () => {
           >
             <div id="profile-background">
               <img src={ProfileAvatar} alt="profile picture" />
-              <p>Dzikri Ardafi</p>
+              <p>{nameUser}</p>
             </div>
           </Link>
         </section>

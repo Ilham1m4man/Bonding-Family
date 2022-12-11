@@ -23,7 +23,12 @@ function SignUpHandler(name, email, password) {
   //   console.log(err);
   // });
 }
+
+function currentUser() {
+  return axios.get(ApiURL + "/users/me");
+}
 export const authFunction = {
   LoginHandler,
   SignUpHandler,
+  currentUser,
 };
