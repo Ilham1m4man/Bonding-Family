@@ -9,7 +9,11 @@ const ProfileIcon = () => {
   return (
     <>
       <Link to={path.profile} className="profile-icon">
-        <img className="profileOnMobileWidth" src={ProfileAvatar} alt="profile picture"/>
+        <img
+          className="profileOnMobileWidth"
+          src={ProfileAvatar}
+          alt="profile picture"
+        />
       </Link>
     </>
   );

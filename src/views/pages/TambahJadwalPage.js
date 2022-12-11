@@ -1,7 +1,7 @@
 import React from "react";
 import CreateNavTemplate from "../templates/CreateNavTemplate";
 
-const ProfilePage = () => {
+const TambahJadwalPage = () => {
   return (
     <>
       <CreateNavTemplate></CreateNavTemplate>
@@ -9,4 +9,4 @@ const ProfilePage = () => {
   );
 };
 
-export default ProfilePage;
+export default TambahJadwalPage;

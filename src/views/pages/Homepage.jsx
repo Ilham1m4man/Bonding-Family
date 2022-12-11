@@ -34,7 +34,7 @@ const HomePage = () => {
           </div>
         )}
 
-        <div
+        {<div
           className="mainContentRightSide"
           style={{ margin: "2em 3em", width: "100%" }}
         >
@@ -42,7 +42,7 @@ const HomePage = () => {
           <br />
 
           <MainContent></MainContent>
-        </div>
+        </div>}
       </div>
     </>
   );

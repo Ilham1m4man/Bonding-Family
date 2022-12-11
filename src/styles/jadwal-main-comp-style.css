@@ -1,3 +1,425 @@
+@import '../main.css';
+
+#jadwal-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: auto;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.page-title {
+  display: none;
+}
+
+@import '../main.css';
+
+#jadwal-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: auto;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.page-title {
+  display: none;
+}
+
 #jadwal-container {
-  border: 1px solid red;
+  border-radius: 20px;
+  width: 85%;
+  padding: 20px;
+  background-color: rgba(var(--pure_white));
+  box-shadow: 0px 50px 100px 0px rgba(0, 0, 0, 0.25);
+}
+
+#tambah-jadwal-container h3 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.arrow-container {
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.jadwal-arrow {
+  cursor: pointer;
+  stroke: rgba(var(--grey-300));
+  border: transparent;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 15px;
+  transition: all 250ms ease-in-out;
+}
+
+.back-arrow {
+  cursor: pointer;
+  stroke: rgba(var(--pure_black));
+  border: transparent;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 15px;
+  transform: rotate(90deg);
+  stroke-width: 3;
+  transition: all 250ms ease-in-out;
+}
+
+.jadwal-arrow:hover {
+  border: 1px solid rgba(var(--grey-100));
+  background-color: rgba(var(--grey-50));
+}
+
+.jadwal-arrow:disabled {
+  cursor: not-allowed;
+}
+
+#next-arrow {
+  transform: rotate(-90deg);
+}
+
+#prev-arrow {
+  transform: rotate(90deg);
+}
+
+#checkbox-container {
+  padding: 10px;
+}
+
+.checkbox-jadwal {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 20px;
+  display: flex;
+  gap: 1.2em;
+  padding: 0 20px;
+}
+
+.ant-checkbox-inner {
+  padding: 10px;
+}
+
+.ant-checkbox-inner::after {
+  padding: 0 6px;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.filter-bulan {
+  width: 300px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.filter-bulan>div {
+  color: rgba(var(--grey-150));
+  border: none;
+  border-radius: 20px;
+  padding: 15px 20px;
+  padding-right: 30px;
+  background-color: rgba(var(--grey-50));
+  font-family: "Red Hat Display", sans-serif;
+}
+
+#jadwal-harian {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tanggal-container {
+  display: flex;
+  align-items: center;
+  color: rgba(var(--pure_white));
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: rgba(var(--cornflower_blue-600));
+}
+
+.tanggal-container>p {
+  font-size: 20px;
+  margin-right: 30px;
+  font-weight: 500;
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+.judul-jam {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  margin: 0 30px;
+}
+
+.judul-jam>p {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  margin-left: auto;
+  flex-grow: 1;
+}
+
+
+.hari-tgl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid rgba(var(--pure_white));
+  justify-content: space-around;
+  gap: 1em;
+}
+
+.hari-tgl p {
+  font-size: 20px;
+  margin-right: 30px;
+  font-weight: 500;
+  width: 55px;
+}
+
+.hari-tgl h3 {
+  font-size: 36px;
+  margin: 0;
+  font-weight: 700;
+  width: 60px;
+  text-align: center;
+}
+
+.jam-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(var(--pure_white));
+  border-radius: 10px;
+  color: rgba(var(--pure_black));
+  width: 100px;
+  height: 45px;
+}
+
+.jam-container p {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.jadwal-buttons {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  width: 48px;
+  stroke: rgba(var(--pure_white));
+  font-size: 50px;
+  margin: 0 20px;
+  margin-left: auto;
+  cursor: pointer;
+  padding: 20px 0;
+  transition: all 250ms ease-in-out;
+}
+
+#tambah-button {
+  padding: 4px 0;
+}
+
+.jadwal-buttons:hover {
+  stroke: rgba(var(--pure_white), 0.5);
+}
+
+.no-schedule>p {
+  color: rgba(var(--grey-100));
+}
+
+#tambah-jadwal-page {
+  min-height: 100vh;
+  height: 100%;
+}
+
+#tambah-jadwal-title-container {
+  display: none;
+}
+
+#tambah-jadwal-title-container h1 {
+  font-size: 32px;
+}
+
+#tambah-jadwal-component {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+
+#form-tambah-jadwal {
+  display: grid;
+  grid-template-columns: minmax(0, 1.30fr) minmax(0, 0.4fr) minmax(0, 1.3fr);
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.4fr) minmax(0, 1fr);
+  column-gap: 10px;
+  row-gap: 20px;
+}
+
+.input-form-jadwal {
+  border: none;
+  outline: transparent;
+  background-color: transparent;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+#judul-jadwal {
+  border-bottom: 1px solid rgba(var(--grey-100));
+  padding: 0 10px;
+}
+
+#catatan-jadwal {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  border-bottom: 1px solid rgba(var(--grey-100));
+  padding: 0 10px;
+}
+
+.display-jam {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 46px;
+  font-weight: 700;
+  border-radius: 20px;
+  width: 150px;
+  height: 60px;
+  place-self: center;
+  transition: all 500ms ease-in-out;
+}
+
+.display-jam[is-active~="true"] {
+  cursor: pointer;
+  background-color: rgba(var(--cornflower_blue-600));
+  border: none;
+  color: rgba(var(--pure_white));
+  font-size: 46px;
+  font-weight: 700;
+  border-radius: 20px;
+  width: 150px;
+  height: 60px;
+  place-self: center;
+  transition: all 500ms ease-in-out;
+}
+
+#display-arrow-right {
+  place-self: center;
+  padding-top: 5px;
+}
+
+#arrow-right-icon {
+  width: 66;
+  height: 38;
+}
+
+#indicator-button {
+  grid-column-start: 1;
+  grid-column-start: 2;
+  place-self: center;
+}
+
+#indicator-button p {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+#input-jam-jadwal {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  text-align: center;
+  font-size: 46px;
+  font-weight: 700;
+}
+
+#input-menit-jadwal {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  text-align: center;
+  font-size: 46px;
+  font-weight: 700;
+}
+
+#titik-dua {
+  place-self: center;
+  font-size: 64px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+#buttons-of-tambah-jadwal {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  padding-top: 40px;
+  width: 350px;
+}
+
+.tambah-jadwal-buttons {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 20px 30px;
+  transition: all 100ms ease-in-out;
+}
+
+#simpan-jadwal-button {
+  background-color: rgba(var(--cornflower_blue-600));
+  color: rgba(var(--pure_white));
+  border-radius: 15px;
+}
+
+#simpan-jadwal-button:active,
+#simpan-jadwal-button:focus,
+#simpan-jadwal-button:hover {
+  background-color: rgba(var(--cornflower_blue-800));
+}
+
+#batal-jadwal-button {
+  border-radius: 15px;
+}
+
+#batal-jadwal-button:hover,
+#batal-jadwal-button:focus {
+  color: rgba(var(--pum_web-800));
+  border-radius: 15px;
+}
+
+#batal-jadwal-button:active {
+  color: rgba(var(--pure_white));
+  background-color: rgba(var(--pum_web-800));
+}
+
+#tambah-jadwal-container {
+  place-self: center;
+  border-radius: 20px;
+  width: 85%;
+  padding: 20px;
+  background-color: rgba(var(--pure_white));
+  box-shadow: 0px 50px 100px 0px rgba(0, 0, 0, 0.25);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }

@@ -1,19 +1,4 @@
-:root {
-  --pure_white: 255, 255, 255;
-  --pure_black: 0, 0, 0;
-  --persian_red: 205, 51, 51;
-  --grey-100: 214, 214, 214;
-  --grey-300: 128, 128, 128;
-  --cornflower_blue-800: 58, 75, 158;
-  --cornflower_blue-600: 105, 123, 213;
-  --sky_blue_crayola-100: 199, 241, 252;
-  --sky_blue_crayola-200: 170, 235, 250;
-  --sky_blue_crayola-500: 92, 193, 218;
-}
-
-#profile-main-content {
-  column-gap: 0;
-}
+@import '../main.css';
 
 .profile-container {
   display: grid;
@@ -32,11 +17,11 @@
   background-color: rgba(var(--pure_white));
   border-radius: 20px;
   box-shadow: 0px 0px 0px 0px rgba(3, 39, 48, 0.08),
-   0px 8px 17px 0px rgba(3, 39, 48, 0.08),
-   0px 32px 32px 0px rgba(3, 39, 48, 0.07),
-   0px 71px 43px 0px rgba(3, 39, 48, 0.04),
-   0px 127px 51px 0px rgba(3, 39, 48, 0.01),
-   0px 198px 56px 0px rgba(3, 39, 48, 0);
+    0px 8px 17px 0px rgba(3, 39, 48, 0.08),
+    0px 32px 32px 0px rgba(3, 39, 48, 0.07),
+    0px 71px 43px 0px rgba(3, 39, 48, 0.04),
+    0px 127px 51px 0px rgba(3, 39, 48, 0.01),
+    0px 198px 56px 0px rgba(3, 39, 48, 0);
 }
 
 .foto-container {

@@ -105,3 +105,180 @@ progress {
   font-size: 27px;
   text-align: center;
 }
+:root {
+  --pure_white: 255, 255, 255;
+  --pure_black: 0, 0, 0;
+  --persian_red: 205, 51, 51;
+  --grey-100: 214, 214, 214;
+  --grey-300: 128, 128, 128;
+  --cornflower_blue-800: 58, 75, 158;
+  --cornflower_blue-600: 105, 123, 213;
+  --sky_blue_crayola-100: 199, 241, 252;
+  --sky_blue_crayola-200: 170, 235, 250;
+  --sky_blue_crayola-500: 92, 193, 218;
+}
+
+.mainContent {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.profile-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: 1fr 2fr;
+  row-gap: 3em;
+  column-gap: 3em;
+  background-color: rgba(var(--sky_blue_crayola-100), 0.7);
+  padding: 30px;
+  border-radius: 20px;
+  width: 85%;
+  backdrop-filter: blur(5px);
+}
+
+.profile-contents {
+  background-color: rgba(var(--pure_white));
+  border-radius: 20px;
+  box-shadow: 0px 0px 0px 0px rgba(3, 39, 48, 0.08),
+   0px 8px 17px 0px rgba(3, 39, 48, 0.08),
+   0px 32px 32px 0px rgba(3, 39, 48, 0.07),
+   0px 71px 43px 0px rgba(3, 39, 48, 0.04),
+   0px 127px 51px 0px rgba(3, 39, 48, 0.01),
+   0px 198px 56px 0px rgba(3, 39, 48, 0);
+}
+
+.foto-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.foto-container img {
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+#profile-section {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+
+.profile_saya-container {
+  margin-bottom: auto;
+  padding: 0 20px;
+  width: 85%;
+}
+
+.profile_saya-container h1 {
+  font-size: 28px;
+  margin-top: 0;
+}
+
+#form-profile-saya {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+  grid-template-rows: 1fr 1fr;
+  row-gap: 2em;
+  column-gap: 1em;
+}
+
+.input-form {
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(var(--grey-100));
+  font-size: 16px;
+}
+
+.input-form:active,
+.input-form:focus {
+  outline: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(var(--grey-100));
+}
+
+#email-profile {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#simpan-button {
+  cursor: pointer;
+  width: 100px;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+  background-color: rgba(var(--sky_blue_crayola-500));
+  color: rgba(var(--pure_white));
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+#jam_istirahat-section {
+  padding: 0 20px;
+}
+
+#jam_istirahat-section h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#jam_istirahat {
+  display: flex;
+  justify-content: center;
+}
+
+#jam_istirahat p,
+#jam_istirahat input {
+  width: 44px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+#pengaturan-section {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8em;
+  align-items: flex-start;
+}
+
+#pengaturan-section h3 {
+  font-size: 28px;
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+
+.notif_switch-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 24px;
+}
+
+#pengaturan-section button {
+  cursor: pointer;
+  font-family: "Red Hat Display", sans-serif;
+  display: block;
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  color: rgba(var(--persian_red));
+  padding: 0;
+}
