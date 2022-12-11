@@ -102,7 +102,7 @@ const SidebarCopy = () => {
               </div>
             )}
           </Link>
-          <Link to={{ pathname: path.tipsNTrick }}>
+          {/* <Link to={{ pathname: path.tipsNTrick }}>
             {currentPath === "/tipsNtrick" ? (
               <div
                 className="iconFiturSidebar"
@@ -130,7 +130,7 @@ const SidebarCopy = () => {
                 <p>Tips & Trik</p>
               </div>
             )}
-          </Link>
+          </Link> */}
         </section>
         <section className="profileName">
           <Link
