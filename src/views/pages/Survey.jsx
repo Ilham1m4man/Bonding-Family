@@ -31,13 +31,12 @@ const Survey = () => {
         ) : (
           <div>
             <SidebarCopy></SidebarCopy>
-            
           </div>
         )}
         <div className="contentRightSide">
-        <NavbarMobile openSidebar={openSidebar}></NavbarMobile>
-        <SurveyMingguan></SurveyMingguan>
-        <ListMinggu></ListMinggu>
+          <NavbarMobile openSidebar={openSidebar}></NavbarMobile>
+          <SurveyMingguan></SurveyMingguan>
+          <ListMinggu></ListMinggu>
         </div>
       </div>
     </>
